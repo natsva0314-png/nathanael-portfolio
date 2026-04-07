@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight, Clock, Lightning, CheckCircle, Star, X, MagnifyingGlassPlus } from '@phosphor-icons/react'
+import { ArrowUpRight, Clock, Lightning, CheckCircle, Star, X, MagnifyingGlassPlus, YoutubeLogo } from '@phosphor-icons/react'
 import { memo, useState } from 'react'
 
 const N8N_PROJECTS = [
@@ -82,6 +82,23 @@ const N8N_PROJECTS = [
       { label: 'Multi-tool capability', icon: 'lightning' },
       { label: 'Real-time stock sync', icon: 'check' },
     ],
+  },
+]
+
+const WEB_PROJECTS = [
+  {
+    id: 'w1',
+    title: 'Nats Gaming Hub',
+    description:
+      'Fully functional premium gaming peripherals e-commerce landing page — product showcase, professional support features, complete sales funnel optimization, and 24/7 AI chatbot integration via Facebook.',
+    image: '/projects/web-nats-gaming-hub.png',
+    tech: ['React', 'Tailwind CSS', 'AI Chatbot', 'Facebook'],
+    metrics: [
+      { label: '16+ products', icon: 'star' },
+      { label: '24/7 AI support', icon: 'lightning' },
+      { label: '100% authentic', icon: 'check' },
+    ],
+    demo: 'https://youtu.be/pNomGTBv_eU',
   },
 ]
 
@@ -250,7 +267,9 @@ function Lightbox({ src, title, onClose }: { src: string; title: string; onClose
   )
 }
 
-const ProjectCard = ({ project, i, onImageClick }: { project: typeof N8N_PROJECTS[0]; i: number; onImageClick: (src: string, title: string) => void }) => (
+type AnyProject = (typeof N8N_PROJECTS[0] | typeof WEB_PROJECTS[0]) & { demo?: string }
+
+const ProjectCard = ({ project, i, onImageClick }: { project: AnyProject; i: number; onImageClick: (src: string, title: string) => void }) => (
   <motion.article
     key={project.id}
     initial={{ opacity: 0, y: 14 }}
@@ -351,14 +370,43 @@ const ProjectCard = ({ project, i, onImageClick }: { project: typeof N8N_PROJECT
           </span>
         ))}
       </div>
+
+      {/* Demo video button */}
+      {'demo' in project && project.demo && (
+        <a
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 mt-2.5 px-3 py-1.5 rounded-xl text-[10px] font-semibold w-full justify-center transition-all duration-200"
+          style={{
+            background: 'rgba(255,0,0,0.08)',
+            border: '1px solid rgba(255,0,0,0.2)',
+            color: '#ff4444',
+            textDecoration: 'none',
+          }}
+          onMouseEnter={(e) => {
+            const el = e.currentTarget
+            el.style.background = 'rgba(255,0,0,0.15)'
+            el.style.borderColor = 'rgba(255,0,0,0.4)'
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget
+            el.style.background = 'rgba(255,0,0,0.08)'
+            el.style.borderColor = 'rgba(255,0,0,0.2)'
+          }}
+        >
+          <YoutubeLogo size={13} weight="fill" />
+          Watch Demo
+        </a>
+      )}
     </div>
   </motion.article>
 )
 
 const ProjectCards = memo(function ProjectCards() {
-  const [tab, setTab] = useState<'n8n' | 'zapier' | 'ghl'>('n8n')
+  const [tab, setTab] = useState<'n8n' | 'zapier' | 'ghl' | 'web'>('n8n')
   const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null)
-  const projects = tab === 'n8n' ? N8N_PROJECTS : tab === 'zapier' ? ZAPIER_PROJECTS : GHL_PROJECTS
+  const projects: AnyProject[] = tab === 'n8n' ? N8N_PROJECTS : tab === 'zapier' ? ZAPIER_PROJECTS : tab === 'ghl' ? GHL_PROJECTS : WEB_PROJECTS
 
   return (
     <div className="w-full">
@@ -368,6 +416,7 @@ const ProjectCards = memo(function ProjectCards() {
           { key: 'n8n', label: 'n8n' },
           { key: 'zapier', label: 'Zapier' },
           { key: 'ghl', label: 'GoHighLevel' },
+          { key: 'web', label: 'Web Design' },
         ] as const).map(({ key, label }) => (
           <button
             key={key}

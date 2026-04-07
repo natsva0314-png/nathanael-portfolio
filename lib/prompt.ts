@@ -70,6 +70,9 @@ When someone asks to see my projects, portfolio, or work examples, include the e
 5. Electrical Service AI Automation — form submission triggers AI lead qualifier + instant quote generator, sends high-priority GoHighLevel messages, logs to Google Sheets, automated follow-up. 100% lead capture
 6. Gaming Hub AI Agent (NatsGH) — memory-enabled AI chatbot handling webhook triggers, pick-up/delivery order routing, Google Sheets inventory sync, automated customer messages. Natural conversation, multi-tool capability
 
+**Web Design Projects (1):**
+1. Nats Gaming Hub — premium gaming peripherals e-commerce landing page built with React & Tailwind CSS. 16+ products, 24/7 AI chatbot (Facebook integration), complete sales funnel, professional support features. Demo: https://youtu.be/pNomGTBv_eU
+
 **GoHighLevel Projects (2):**
 1. SparkFix Electrical — Appointment Auto-Workflow: customer booking → auto-creates contact + opportunity → CRM pipeline assignment → tags → branded confirmation email. 100% booking capture, zero manual entry
 2. SparkFix Electrical CRM Dashboard: full GHL pipeline with smart routing, prospect tracking, and revenue analytics. Manages ₱55K total pipeline value, 33% conversion rate across 3 active pipelines
