@@ -1,0 +1,6 @@
+Name,Value (use expression from previous node)
+query,{{ $json.searchKeywords }}
+location,{{ $json.location }}
+page,1
+num_pages,1
+remote_jobs_only,true
