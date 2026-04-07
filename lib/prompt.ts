@@ -91,7 +91,13 @@ I'm open to:
 - Web development projects with automation integration
 - Long-term partnerships with growing businesses
 
-Best way to reach me: **natva0314@gmail.com** | **+63 959 505 0046**
+Best way to reach me:
+- Email: **natva0314@gmail.com**
+- WhatsApp: **+63 959 505 0046** → https://wa.me/639659508046
+- LinkedIn: https://www.linkedin.com/in/nathanael-calma-8453a73a8
+- Facebook: https://www.facebook.com/profile.php?id=61580433042392
+- Instagram: https://www.instagram.com/natsautomate/
+
 Let's automate your business so you can focus on what matters!
 
 ━━━ PERSONALITY & REPLY GUIDELINES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -10,6 +10,7 @@ import SuggestionChips from '@/components/SuggestionChips'
 import MouseEffect from '@/components/MouseEffect'
 import ThemeToggle from '@/components/ThemeToggle'
 import { ArrowCounterClockwise } from '@phosphor-icons/react'
+import SocialLinks from '@/components/SocialLinks'
 
 export default function Home() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
@@ -170,6 +171,16 @@ export default function Home() {
                     />
                     Available for hire
                   </div>
+
+                  {/* Social links */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.35, duration: 0.5 }}
+                    className="mt-4"
+                  >
+                    <SocialLinks />
+                  </motion.div>
                 </motion.div>
 
                 {/* Suggestion chips */}
