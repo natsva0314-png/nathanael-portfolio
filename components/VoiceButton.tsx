@@ -9,16 +9,17 @@ interface VoiceButtonProps {
   disabled?: boolean
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnySpeechRecognition = any
+
 export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps) {
   const [isRecording, setIsRecording] = useState(false)
   const [isSupported, setIsSupported] = useState(false)
-  const recognitionRef = useRef<SpeechRecognition | null>(null)
+  const recognitionRef = useRef<AnySpeechRecognition>(null)
 
   useEffect(() => {
-    const SpeechRec =
-      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition
-    setIsSupported(!!SpeechRec)
+    const w = window as Record<string, unknown>
+    setIsSupported(!!(w['SpeechRecognition'] || w['webkitSpeechRecognition']))
   }, [])
 
   const stopRecording = useCallback(() => {
@@ -27,9 +28,8 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
   }, [])
 
   const startRecording = useCallback(() => {
-    const SpeechRec =
-      (window as unknown as { SpeechRecognition?: typeof SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { webkitSpeechRecognition?: typeof SpeechRecognition }).webkitSpeechRecognition
+    const w = window as Record<string, unknown>
+    const SpeechRec = (w['SpeechRecognition'] || w['webkitSpeechRecognition']) as (new () => AnySpeechRecognition) | undefined
     if (!SpeechRec) return
 
     const recognition = new SpeechRec()
@@ -38,11 +38,10 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
     recognition.maxAlternatives = 1
     recognition.continuous = false
 
-    recognition.onresult = (e: SpeechRecognitionEvent) => {
-      const transcript = e.results[0]?.[0]?.transcript?.trim()
+    recognition.onresult = (e: AnySpeechRecognition) => {
+      const transcript = e.results?.[0]?.[0]?.transcript?.trim()
       if (transcript) onTranscript(transcript)
     }
-
     recognition.onend = () => setIsRecording(false)
     recognition.onerror = () => setIsRecording(false)
 
@@ -74,7 +73,6 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
         opacity: disabled ? 0.5 : 1,
       }}
     >
-      {/* Pulsing ring when recording */}
       <AnimatePresence>
         {isRecording && (
           <motion.span
