@@ -12,10 +12,27 @@ import ThemeToggle from '@/components/ThemeToggle'
 import { ArrowCounterClockwise } from '@phosphor-icons/react'
 import SocialLinks from '@/components/SocialLinks'
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/\[PROJECTS_SHOWCASE\]/g, '')
+    .replace(/#{1,6}\s+/g, '')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/`{1,3}[^`]*`{1,3}/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^[-*+]\s+/gm, '')
+    .replace(/^\d+\.\s+/gm, '')
+    .replace(/\n{2,}/g, '. ')
+    .replace(/\n/g, ' ')
+    .trim()
+}
+
 export default function Home() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
   const [avatarState, setAvatarState] = useState<AvatarState>('idle')
+  const [ttsEnabled, setTtsEnabled] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const lastSpokenIdRef = useRef<string | null>(null)
 
   const { messages, input, handleInputChange, handleSubmit, isLoading, append, setMessages } = useChat({
     api: '/api/chat',
@@ -26,14 +43,11 @@ export default function Home() {
 
   const hasMessages = messages.length > 0
 
-  // Sync theme class to <html> so body bg + all CSS vars resolve correctly
+  // Sync theme class to <html>
   useEffect(() => {
     const html = document.documentElement
-    if (theme === 'light') {
-      html.classList.add('light')
-    } else {
-      html.classList.remove('light')
-    }
+    if (theme === 'light') html.classList.add('light')
+    else html.classList.remove('light')
   }, [theme])
 
   // Avatar → thinking state while loading
@@ -46,25 +60,47 @@ export default function Home() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, isLoading])
 
+  // TTS: speak new assistant messages when enabled
+  useEffect(() => {
+    if (!ttsEnabled || isLoading) return
+    const lastMsg = messages[messages.length - 1]
+    if (!lastMsg || lastMsg.role !== 'assistant') return
+    if (lastMsg.id === lastSpokenIdRef.current) return
+
+    lastSpokenIdRef.current = lastMsg.id
+    const utterance = new SpeechSynthesisUtterance(stripMarkdown(lastMsg.content))
+    utterance.rate = 1.05
+    utterance.pitch = 1
+    utterance.lang = 'en-US'
+    window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(utterance)
+
+    return () => { window.speechSynthesis.cancel() }
+  }, [messages, ttsEnabled, isLoading])
+
+  // Stop TTS when disabled
+  useEffect(() => {
+    if (!ttsEnabled) window.speechSynthesis?.cancel()
+  }, [ttsEnabled])
+
   const handleChipClick = useCallback(
-    (text: string) => {
-      append({ role: 'user', content: text })
-    },
+    (text: string) => { append({ role: 'user', content: text }) },
     [append]
   )
 
   const handleFormSubmit = useCallback(
-    (e: React.FormEvent) => {
-      handleSubmit(e)
-    },
+    (e: React.FormEvent) => { handleSubmit(e) },
     [handleSubmit]
   )
 
-  // For textarea onChange compatibility
   const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    // The useChat hook expects HTMLInputElement events; we adapt it
     handleInputChange(e as unknown as React.ChangeEvent<HTMLInputElement>)
   }
+
+  const handleVoiceTranscript = useCallback(
+    (text: string) => { append({ role: 'user', content: text }) },
+    [append]
+  )
 
   return (
     <div
@@ -400,8 +436,11 @@ export default function Home() {
           <ChatInput
             input={input}
             isLoading={isLoading}
+            ttsEnabled={ttsEnabled}
             onChange={handleTextareaChange}
             onSubmit={handleFormSubmit}
+            onVoiceTranscript={handleVoiceTranscript}
+            onTtsToggle={() => setTtsEnabled(v => !v)}
           />
         </div>
       </div>

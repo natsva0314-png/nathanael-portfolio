@@ -1,17 +1,29 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { PaperPlaneTilt, CircleNotch } from '@phosphor-icons/react'
+import { PaperPlaneTilt, CircleNotch, SpeakerHigh, SpeakerSlash } from '@phosphor-icons/react'
 import { useRef } from 'react'
+import VoiceButton from './VoiceButton'
 
 interface ChatInputProps {
   input: string
   isLoading: boolean
+  ttsEnabled: boolean
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
   onSubmit: (e: React.FormEvent) => void
+  onVoiceTranscript: (text: string) => void
+  onTtsToggle: () => void
 }
 
-export default function ChatInput({ input, isLoading, onChange, onSubmit }: ChatInputProps) {
+export default function ChatInput({
+  input,
+  isLoading,
+  ttsEnabled,
+  onChange,
+  onSubmit,
+  onVoiceTranscript,
+  onTtsToggle,
+}: ChatInputProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -25,7 +37,6 @@ export default function ChatInput({ input, isLoading, onChange, onSubmit }: Chat
 
   const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     onChange(e)
-    // Auto-resize
     const el = e.target
     el.style.height = 'auto'
     el.style.height = Math.min(el.scrollHeight, 120) + 'px'
@@ -42,12 +53,11 @@ export default function ChatInput({ input, isLoading, onChange, onSubmit }: Chat
     >
       <form onSubmit={onSubmit} className="relative">
         <div
-          className="flex items-end gap-3 rounded-2xl px-4 py-3 transition-all duration-200"
+          className="flex items-end gap-2 rounded-2xl px-4 py-3 transition-all duration-200"
           style={{
             background: 'var(--bg-surface)',
             border: '1px solid var(--border)',
           }}
-          onFocus={() => {}}
         >
           <textarea
             ref={textareaRef}
@@ -65,6 +75,30 @@ export default function ChatInput({ input, isLoading, onChange, onSubmit }: Chat
             }}
           />
 
+          {/* TTS toggle */}
+          <motion.button
+            type="button"
+            onClick={onTtsToggle}
+            whileTap={{ scale: 0.88 }}
+            title={ttsEnabled ? 'Mute AI voice' : 'Enable AI voice'}
+            className="flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200"
+            style={{
+              background: ttsEnabled ? 'var(--accent-glow)' : 'var(--bg-elevated)',
+              border: ttsEnabled ? '1px solid var(--border-accent)' : '1px solid var(--border)',
+              color: ttsEnabled ? 'var(--accent)' : 'var(--text-secondary)',
+              cursor: 'pointer',
+            }}
+          >
+            {ttsEnabled
+              ? <SpeakerHigh size={16} weight="bold" />
+              : <SpeakerSlash size={16} weight="bold" />
+            }
+          </motion.button>
+
+          {/* Voice input */}
+          <VoiceButton onTranscript={onVoiceTranscript} disabled={isLoading} />
+
+          {/* Send */}
           <motion.button
             type="submit"
             disabled={!canSend}
@@ -88,7 +122,7 @@ export default function ChatInput({ input, isLoading, onChange, onSubmit }: Chat
         className="text-center text-[10px] mt-2 tracking-wide"
         style={{ color: 'var(--text-secondary)', opacity: 0.45 }}
       >
-        Press Enter to send · Shift+Enter for new line
+        Enter to send · Shift+Enter for new line · Mic to speak
       </p>
     </motion.div>
   )
