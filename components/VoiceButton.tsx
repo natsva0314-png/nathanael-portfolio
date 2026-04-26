@@ -18,7 +18,7 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
   const recognitionRef = useRef<AnySpeechRecognition>(null)
 
   useEffect(() => {
-    const w = window as Record<string, unknown>
+    const w = window as unknown as Record<string, unknown>
     setIsSupported(!!(w['SpeechRecognition'] || w['webkitSpeechRecognition']))
   }, [])
 
@@ -28,7 +28,7 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
   }, [])
 
   const startRecording = useCallback(() => {
-    const w = window as Record<string, unknown>
+    const w = window as unknown as Record<string, unknown>
     const SpeechRec = (w['SpeechRecognition'] || w['webkitSpeechRecognition']) as (new () => AnySpeechRecognition) | undefined
     if (!SpeechRec) return
 
