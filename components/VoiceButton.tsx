@@ -9,17 +9,21 @@ interface VoiceButtonProps {
   disabled?: boolean
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnySpeechRecognition = any
+function getSpeechRecognition(): (new () => { lang: string; interimResults: boolean; maxAlternatives: number; continuous: boolean; onresult: ((e: { results: { [k: number]: { [k: number]: { transcript: string } } } }) => void) | null; onend: (() => void) | null; onerror: (() => void) | null; start: () => void; stop: () => void }) | null {
+  if (typeof window === 'undefined') return null
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const w = window as any
+  return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null
+}
 
 export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps) {
   const [isRecording, setIsRecording] = useState(false)
   const [isSupported, setIsSupported] = useState(false)
-  const recognitionRef = useRef<AnySpeechRecognition>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null)
 
   useEffect(() => {
-    const w = window as unknown as Record<string, unknown>
-    setIsSupported(!!(w['SpeechRecognition'] || w['webkitSpeechRecognition']))
+    setIsSupported(getSpeechRecognition() !== null)
   }, [])
 
   const stopRecording = useCallback(() => {
@@ -28,8 +32,7 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
   }, [])
 
   const startRecording = useCallback(() => {
-    const w = window as unknown as Record<string, unknown>
-    const SpeechRec = (w['SpeechRecognition'] || w['webkitSpeechRecognition']) as (new () => AnySpeechRecognition) | undefined
+    const SpeechRec = getSpeechRecognition()
     if (!SpeechRec) return
 
     const recognition = new SpeechRec()
@@ -38,7 +41,8 @@ export default function VoiceButton({ onTranscript, disabled }: VoiceButtonProps
     recognition.maxAlternatives = 1
     recognition.continuous = false
 
-    recognition.onresult = (e: AnySpeechRecognition) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript?.trim()
       if (transcript) onTranscript(transcript)
     }
