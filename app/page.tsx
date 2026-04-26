@@ -9,8 +9,9 @@ import MessageBubble from '@/components/MessageBubble'
 import SuggestionChips from '@/components/SuggestionChips'
 import MouseEffect from '@/components/MouseEffect'
 import ThemeToggle from '@/components/ThemeToggle'
-import { ArrowCounterClockwise } from '@phosphor-icons/react'
+import { ArrowCounterClockwise, ArrowRight } from '@phosphor-icons/react'
 import SocialLinks from '@/components/SocialLinks'
+import Link from 'next/link'
 
 function stripMarkdown(text: string): string {
   return text
@@ -240,6 +241,7 @@ export default function Home() {
                     { value: '50+', label: 'Automations' },
                     { value: '500+', label: 'Hrs saved/mo' },
                     { value: '99.5%', label: 'Success rate' },
+                    { value: '$70M+', label: 'Client Revenue' },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p
@@ -253,6 +255,47 @@ export default function Home() {
                       </p>
                     </div>
                   ))}
+                </motion.div>
+
+                {/* Featured Case Study Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="w-full mt-4"
+                >
+                  <Link href="/case-study/real-estate" style={{ textDecoration: 'none' }}>
+                    <motion.div
+                      whileHover={{ scale: 1.015, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full rounded-2xl p-4 flex items-center gap-4 transition-all duration-200"
+                      style={{
+                        background: 'var(--bg-surface)',
+                        border: '1px solid var(--border-accent)',
+                        boxShadow: '0 0 28px var(--accent-glow)',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <div
+                        className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
+                        style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
+                      >
+                        ★
+                      </div>
+                      <div className="flex-1 min-w-0 text-left">
+                        <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--accent)' }}>
+                          Featured Case Study
+                        </p>
+                        <p className="text-sm font-semibold leading-tight truncate" style={{ color: 'var(--text-primary)' }}>
+                          $70M/year Real Estate Brokerage — 4 AI Systems
+                        </p>
+                        <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>
+                          9 hrs → seconds · 30+ hrs/week saved · 100% automated
+                        </p>
+                      </div>
+                      <ArrowRight size={16} weight="bold" style={{ color: 'var(--accent)', flexShrink: 0 }} />
+                    </motion.div>
+                  </Link>
                 </motion.div>
 
                 {/* Book a Call CTA */}
