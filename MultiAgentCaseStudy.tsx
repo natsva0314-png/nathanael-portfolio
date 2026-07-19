@@ -3,9 +3,9 @@ import React from 'react';
 const MultiAgentCaseStudy: React.FC = () => {
   const images = {
     slack: "/projects/slack.png",
-    mainAgent: "/projects/agent1.png",
+    mainAgent: "/projects/Agent01.png",
     subAgent: "/projects/agent1sub.png",
-    sheet: "/projects/sheet.png",
+    sheet: "/projects/Sheet1.png",
     gmail: "/projects/Gmail1.png"
   };
 
