@@ -176,12 +176,12 @@ const MultiAgentCaseStudy: React.FC = () => {
               </div>
             </div>
 
-            {/* Module 5 */}
+                        {/* Module 5 */}
             <div className="space-y-4 border-t border-slate-900/50 pt-10">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">05</div>
                 <div className="flex-1">
-                  <h3 className="text-sm font-bold text-white">Branded Inbox Delivery</h3>
+                  <h3 className="text-sm font-bold text-white tracking-tight">Branded Inbox Delivery</h3>
                   <p className="text-xs text-cyan-400 mt-0.5 font-medium">Executive Branded Intelligence Client Briefing</p>
                 </div>
               </div>
@@ -205,12 +205,13 @@ const MultiAgentCaseStudy: React.FC = () => {
 
           </div>
         </div>
+      </div>
 
       {/* Modern Lightbox Modal Overlay for Fullscreen High-Resolution Image Expansion */}
       {activeImage && (
         <div 
           onClick={() => setActiveImage(null)} 
-          className="fixed inset-0 bg-slate-950/95 z-[100] flex items-center justify-center p-4 md:p-8 cursor-zoom-out"
+          className="fixed inset-0 bg-slate-950/95 z-50 flex items-center justify-center p-4 md:p-8 cursor-zoom-out"
         >
           <div className="absolute top-6 right-6 flex items-center gap-2 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 px-3 py-1.5 rounded-xl transition-colors duration-200 text-slate-300 text-xs font-mono uppercase tracking-wider shadow-2xl">
             <span>Close View</span>
@@ -233,4 +234,5 @@ const MultiAgentCaseStudy: React.FC = () => {
 };
 
 export default MultiAgentCaseStudy;
+
 
