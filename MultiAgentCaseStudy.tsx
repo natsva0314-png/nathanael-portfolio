@@ -110,7 +110,7 @@ const MultiAgentCaseStudy: React.FC = () => {
                   <span key={badge} className="text-[10px] bg-[#0b0f19] text-zinc-400 px-3 py-1 rounded border border-slate-800/80 font-mono">{badge}</span>
                 ))}
               </div>
-              <div className="pl-12 pt-2">
+              <div className="pl-12 pt-10">
                 <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
                   <img src={images.slack} alt="Slack Stream Payload" className="w-full h-auto rounded-lg block object-cover" />
                 </div>
