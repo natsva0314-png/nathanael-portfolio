@@ -82,9 +82,9 @@ const MultiAgentCaseStudy: React.FC = () => {
             Scaling digital creator agencies operate round-the-clock, meaning administrative or infrastructure delays directly impact tip revenue pipelines. Manual workflows completely stall under chaotic conditions:
           </p>
           <ul className="space-y-2.5 text-xs text-slate-400 pl-0 list-none">
-            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Unstructured streams of message pings confuse task priority levels.</li>
-            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Critical 504 webhook crashes and profile locks sit unresolved for hours.</li>
-            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Workforce project bottlenecks are tracked using human opinions instead of logs.</li>
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> High-Velocity Multi-Task Ingestion: Dozens of competing operational strings arrive simultaneously, hiding critical server drops behind routine status chatter.</li>
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> The First-Hour Management Bottleneck: Human sorting limits force a 60-minute processing delay before actionable triage plans can even be drafted.</li>
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Subjective Workforce Intervention: Escalating system blockages and team rebalancing are handled through emotional arguments rather than clear relational database thresholds.</li>
           </ul>
         </div>
 
