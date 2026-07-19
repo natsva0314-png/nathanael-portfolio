@@ -10,8 +10,33 @@ const MultiAgentCaseStudy: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 w-full h-full bg-[#030712] overflow-y-auto z-50 text-slate-400 font-sans antialiased text-sm scroll-smooth">
-      <div className="max-w-4xl mx-auto px-4 py-16">
+    <div className="fixed inset-0 w-full h-full bg-[#030712] overflow-y-auto z-50 text-zinc-400 font-sans antialiased text-sm scroll-smooth">
+      
+      {/* Premium Global Navigation Header Peak */}
+      <nav className="sticky top-0 w-full bg-[#030712]/80 backdrop-blur-md border-b border-slate-900/60 z-50 px-6 py-4">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          
+          {/* Back Action Link Button */}
+          <Link href="/" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors duration-200 text-xs font-semibold no-underline">
+            <span className="text-sm">←</span>
+            <span>Back to Portfolio</span>
+          </Link>
+
+          {/* Centered Premium Branded Text Signature */}
+          <div className="text-cyan-400 font-mono font-black tracking-widest text-sm uppercase select-none">
+            Nath.ai
+          </div>
+
+          {/* Right Mode Theme Status Pill */}
+          <div className="bg-[#0b0f19]/80 border border-slate-800/60 px-3 py-1.5 rounded-xl text-zinc-400 text-[11px] font-medium select-none shadow-sm">
+            Light
+          </div>
+
+        </div>
+      </nav>
+
+      {/* Main Portfolio Content Case Area */}
+      <div className="max-w-4xl mx-auto px-6 py-16">
         
         {/* Category Tag */}
         <div className="flex justify-start mb-4">
