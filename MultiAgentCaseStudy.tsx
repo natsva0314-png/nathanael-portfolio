@@ -11,7 +11,8 @@ const MultiAgentCaseStudy: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#030712] text-slate-400 py-24 px-6 font-sans antialiased text-sm">
+    <section className="bg-[#030712] text-slate-400 py-24 px-6 font-sans antialiased text-sm min-h-screen overflow-y-auto relative block">
+
       <div className="max-w-4xl mx-auto">
         
         {/* Project Category Identifier */}
