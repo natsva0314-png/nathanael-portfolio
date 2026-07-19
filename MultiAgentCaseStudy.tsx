@@ -3,11 +3,11 @@ import React from 'react';
 const MultiAgentCaseStudy: React.FC = () => {
   // Direct raw stream links fully populated for production rendering on Vercel
   const images = {
-    slack: "https://dropbox.com",
-    mainAgent: "https://dropbox.com",
-    subAgent: "https://dropbox.com",
-    sheet: "https://dropbox.com",
-    gmail: "https://dropbox.com"
+    slack: "https://www.dropbox.com/scl/fi/u50ap39o9cyb7q2pvntir/slack.png?rlkey=xm8lcgmxjo01gjtyb32bn3mfe&st=vbhizq29&dl=0",
+    mainAgent: "https://www.dropbox.com/scl/fi/jjt20z7wgn1ngyhr1jr7z/agent1.png?rlkey=jmq9xm7rxpba2jjtbyx8ap3z5&st=ev3ss8pr&dl=0",
+    subAgent: "https://www.dropbox.com/scl/fi/pvottwsdz9i1vjh2buwe3/agent1sub.png?rlkey=u53b9bm1d1w3kf4gnhn72i844&st=wantpmpx&dl=0",
+    sheet: "https://www.dropbox.com/scl/fi/j6xx9oaosee4uq5r81s0h/sheet.png?rlkey=awwxlgjs0bx8f6l40834h35lj&st=t329ztid&dl=0",
+    gmail: "https://www.dropbox.com/scl/fi/mbb0k51vn5xzox1cw0vyx/gmail.png?rlkey=hind20fjueyf3b44ksw1ch6u9&st=o5mwsa66&dl=0"
   };
 
   return (
