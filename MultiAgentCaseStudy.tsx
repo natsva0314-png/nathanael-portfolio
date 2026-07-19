@@ -10,255 +10,216 @@ const MultiAgentCaseStudy: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 w-full h-full bg-[#05060f] overflow-y-auto z-50 text-slate-400 font-sans antialiased text-[15px] scroll-smooth">
-      <div className="max-w-4xl mx-auto px-6 py-24"> {/* Increased top padding */}
-
-        {/* Category */}
-        <div className="flex items-center gap-2 text-cyan-400 text-sm mb-6">
-          <span className="text-cyan-500">●</span> Agency Operations
+    <div className="fixed inset-0 w-full h-full bg-[#030712] overflow-y-auto z-50 text-slate-400 font-sans antialiased text-sm scroll-smooth">
+      <div className="max-w-4xl mx-auto px-4 py-16">
+        
+        {/* Category Tag */}
+        <div className="flex justify-start mb-4">
+          <span className="text-cyan-400 text-xs font-semibold tracking-wider uppercase bg-cyan-950/40 border border-cyan-800/30 px-3 py-1 rounded-full">
+            ✦ Agency Operations
+          </span>
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tighter leading-none mb-12">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight mb-8">
           Autonomous Multi-Agent Crisis Triage &amp; Workforce Governance Engine
         </h1>
 
-        {/* Context */}
-        <div className="flex flex-wrap gap-x-16 gap-y-8 text-sm mb-20">
-          <div>
-            <div className="text-slate-500">Client</div>
-            <div className="text-white">Digital Creator Agency</div>
+        {/* Metrics Blocks Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="bg-[#0b0f19]/60 p-5 rounded-xl border border-slate-900/80">
+            <div className="text-xl font-bold text-white">3 Hours</div>
+            <div className="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-1">Manual Triage Buffer</div>
           </div>
-          <div>
-            <div className="text-slate-500">Role</div>
-            <div className="text-white">AI Automation Architect</div>
+          <div className="bg-[#0b0f19]/60 p-5 rounded-xl border border-slate-900/80">
+            <div className="text-xl font-bold text-cyan-400">99.5% Success</div>
+            <div className="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-1">Operational Velocity</div>
           </div>
-          <div>
-            <div className="text-slate-500">Systems Built</div>
-            <div className="text-white">5 Autonomous Agents</div>
+          <div className="bg-[#0b0f19]/60 p-5 rounded-xl border border-slate-900/80">
+            <div className="text-xl font-bold text-white">3s</div>
+            <div className="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-1">Automated Loop Time</div>
           </div>
-        </div>
-
-        {/* Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-28">
-          <div className="bg-[#0a0c1a] rounded-3xl p-10 text-center">
-            <div className="text-6xl font-bold text-white mb-3">3</div>
-            <div className="text-cyan-400 text-sm tracking-widest">HOURS</div>
-            <div className="text-slate-400 text-xs mt-2">MANUAL TRIAGE BUFFER</div>
-          </div>
-          
-          <div className="bg-[#0a0c1a] rounded-3xl p-10 text-center">
-            <div className="text-6xl font-bold text-cyan-400 mb-3">99.5%</div>
-            <div className="text-cyan-400 text-sm tracking-widest">SUCCESS</div>
-            <div className="text-slate-400 text-xs mt-2">OPERATIONAL VELOCITY</div>
-          </div>
-          
-          <div className="bg-[#0a0c1a] rounded-3xl p-10 text-center">
-            <div className="text-6xl font-bold text-white mb-3">3s</div>
-            <div className="text-cyan-400 text-sm tracking-widest">LOOP TIME</div>
-            <div className="text-slate-400 text-xs mt-2">AUTOMATED</div>
-          </div>
-          
-          <div className="bg-[#0a0c1a] rounded-3xl p-10 text-center">
-            <div className="text-6xl font-bold text-emerald-400 mb-3">0%</div>
-            <div className="text-cyan-400 text-sm tracking-widest">BIAS</div>
-            <div className="text-slate-400 text-xs mt-2">DATA GOVERNANCE</div>
+          <div className="bg-[#0b0f19]/60 p-5 rounded-xl border border-slate-900/80">
+            <div className="text-xl font-bold text-white">0% Bias</div>
+            <div className="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-1">Data Governance</div>
           </div>
         </div>
 
-        {/* The Challenge */}
-        <div className="mb-28">
-          <h2 className="text-cyan-400 text-xl font-semibold mb-12 tracking-tight">/ The Challenge</h2>
-          
-          <div className="bg-[#0a0c1a] rounded-3xl p-12">
-            <p className="mb-12 text-slate-300 text-[15.5px] leading-relaxed">
-              Scaling digital creator agencies operate round-the-clock. Manual workflows collapse under high-velocity chaos, creating massive revenue leakage.
-            </p>
-            
-            <ul className="space-y-8 text-slate-300">
-              <li className="flex gap-4">
-                <span className="text-red-500 font-bold flex-shrink-0 mt-1">✕</span>
-                Unstructured Slack pings and alerts overwhelm priority detection.
-              </li>
-              <li className="flex gap-4">
-                <span className="text-red-500 font-bold flex-shrink-0 mt-1">✕</span>
-                Critical 504 webhook failures and profile locks remain unresolved for hours.
-              </li>
-              <li className="flex gap-4">
-                <span className="text-red-500 font-bold flex-shrink-0 mt-1">✕</span>
-                Workforce bottlenecks are managed through subjective human judgment instead of real-time logs.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* The Solution */}
-        <div className="mb-28">
-          <h2 className="text-cyan-400 text-xl font-semibold mb-14 tracking-tight">/ The Solution — 5 Automation Systems</h2>
-          
-          <div className="space-y-32"> {/* Increased vertical spacing between modules */}
-
-            {/* 01 */}
-            <div>
-              <div className="flex gap-6 mb-10">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-950 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-mono font-bold text-2xl flex-shrink-0">01</div>
-                <div className="pt-1">
-                  <h3 className="text-white text-2xl font-semibold tracking-tight">Raw Dynamic Input Sensor</h3>
-                  <p className="text-cyan-400 mt-1">Slack Operational Sandbox</p>
-                </div>
-              </div>
-              
-              <div className="pl-[72px]">
-                <p className="text-slate-300 leading-relaxed mb-10 text-[15.5px]">
-                  Early-warning monitor that continuously scans active channels for API failures, text dumps, and system alerts. Converts raw inputs into structured vectors for downstream agents.
-                </p>
-                
-                <div className="flex flex-wrap gap-3 mb-12">
-                  {['Slack API', 'String Ingestion', 'Payload Capture'].map(tag => (
-                    <span key={tag} className="bg-[#11141f] text-xs px-6 py-3 rounded-2xl border border-slate-700 font-mono text-slate-400">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="bg-[#0a0c1a] rounded-3xl p-3">
-                  <img src={images.slack} alt="Slack Stream" className="rounded-2xl w-full" />
-                </div>
-              </div>
-            </div>
-
-            {/* 02 */}
-            <div>
-              <div className="flex gap-6 mb-10">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-950 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-mono font-bold text-2xl flex-shrink-0">02</div>
-                <div className="pt-1">
-                  <h3 className="text-white text-2xl font-semibold tracking-tight">Ops Triage Supervisor</h3>
-                  <p className="text-cyan-400 mt-1">Zapier Copilot Parent Manager Agent</p>
-                </div>
-              </div>
-              
-              <div className="pl-[72px]">
-                <p className="text-slate-300 leading-relaxed mb-10 text-[15.5px]">
-                  Autonomous processing core. Filters incoming data, separates critical exceptions from routine backlogs, and dynamically generates hour-by-hour triage scripts.
-                </p>
-                
-                <div className="flex flex-wrap gap-3 mb-12">
-                  {['Zapier Copilot', 'AI Core', 'Incident Matrix'].map(tag => (
-                    <span key={tag} className="bg-[#11141f] text-xs px-6 py-3 rounded-2xl border border-slate-700 font-mono text-slate-400">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="bg-[#0a0c1a] rounded-3xl p-3">
-                  <img src={images.mainAgent} alt="Main Agent" className="rounded-2xl w-full" />
-                </div>
-              </div>
-            </div>
-
-            {/* 03 */}
-            <div>
-              <div className="flex gap-6 mb-10">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-950 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-mono font-bold text-2xl flex-shrink-0">03</div>
-                <div className="pt-1">
-                  <h3 className="text-white text-2xl font-semibold tracking-tight">Sub-Agent Execution Layer</h3>
-                  <p className="text-cyan-400 mt-1">Specialized Worker Nodes</p>
-                </div>
-              </div>
-              
-              <div className="pl-[72px]">
-                <p className="text-slate-300 leading-relaxed mb-10 text-[15.5px]">
-                  Parallel execution of specialized sub-agents handling distinct remediation tasks (webhook recovery, profile unlock, content moderation, etc.).
-                </p>
-                
-                <div className="flex flex-wrap gap-3 mb-12">
-                  {['Worker Agents', 'Parallel Execution', 'Remediation Scripts'].map(tag => (
-                    <span key={tag} className="bg-[#11141f] text-xs px-6 py-3 rounded-2xl border border-slate-700 font-mono text-slate-400">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="bg-[#0a0c1a] rounded-3xl p-3">
-                  <img src={images.subAgent} alt="Sub Agent" className="rounded-2xl w-full" />
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Output Generation */}
-        <div className="mb-28">
-          <h2 className="text-cyan-400 text-xl font-semibold mb-12 tracking-tight">/ Output Generation</h2>
-          
-          <div className="space-y-12">
-            <div className="bg-[#0a0c1a] rounded-3xl p-12">
-              <div className="flex gap-4 items-center mb-8 text-cyan-400">
-                <span className="text-4xl">⚙️</span>
-                <div className="font-semibold text-white text-xl">Zero Loop Latency Pipeline</div>
-              </div>
-              <img src={images.sheet} alt="Zero Latency Output" className="rounded-2xl w-full" />
-            </div>
-
-            <div className="bg-[#0a0c1a] rounded-3xl p-12">
-              <div className="flex gap-4 items-center mb-8 text-cyan-400">
-                <span className="text-4xl">🔒</span>
-                <div className="font-semibold text-white text-xl">Systemized Accountability</div>
-              </div>
-              <img src={images.gmail} alt="Accountability Output" className="rounded-2xl w-full" />
-            </div>
-          </div>
-        </div>
-
-        {/* Tools & Stack */}
-        <div className="mb-28">
-          <h2 className="text-cyan-400 text-xl font-semibold mb-12 tracking-tight">/ Tools &amp; Stack</h2>
-          <div className="bg-[#0a0c1a] rounded-3xl p-12">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-8 text-slate-300">
-              {['Zapier AI', 'Airtable', 'Google Sheets', 'Gmail API', 'Slack Developer API', 'Tailwind CSS', 'Claude', 'Custom Agents'].map(tool => (
-                <div key={tool} className="py-1 text-[15px]">{tool}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Results */}
-        <div className="mb-28">
-          <h2 className="text-cyan-400 text-xl font-semibold mb-12 tracking-tight">/ Results</h2>
-          <div className="grid grid-cols-2 gap-8">
-            <div className="bg-[#0a0c1a] rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-white mb-4">3s</div>
-              <div className="text-cyan-400">Automated Loop Time</div>
-            </div>
-            <div className="bg-[#0a0c1a] rounded-3xl p-12 text-center">
-              <div className="text-6xl font-bold text-emerald-400 mb-4">99.5%</div>
-              <div className="text-cyan-400">Operational Success Rate</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="bg-[#0a0c1a] rounded-3xl p-16 text-center">
-          <div className="inline-block border border-slate-500 text-xs font-mono tracking-[3px] px-10 py-3 rounded-full mb-10">
-            PROJECT COMPLETE
-          </div>
-          
-          <h3 className="text-3xl font-bold text-white tracking-tighter mb-8">
-            Want a similar automated system for your agency?
-          </h3>
-          
-          <p className="max-w-md mx-auto text-slate-400 mb-12 leading-relaxed text-[15.5px]">
-            Let's connect your tools, build custom parent orchestrators, and deploy specialized worker sub-agents to eliminate manual overhead.
+        {/* The Challenge Block */}
+        <div className="mb-14 border-t border-slate-900 pt-8">
+          <h2 className="text-base font-bold text-white mb-4">// The Challenge</h2>
+          <p className="text-slate-400 mb-4 leading-relaxed text-xs">
+            Scaling digital creator agencies operate round-the-clock, meaning administrative or infrastructure delays directly impact tip revenue pipelines. Manual workflows completely stall under chaotic conditions:
           </p>
-          
-          <a
-            href="https://calendly.com/natsva0314/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-cyan-400 text-black font-semibold px-16 py-5 rounded-2xl hover:bg-cyan-300 transition-all text-lg"
-          >
-            📬 Book Strategy Call with Nathanael
+          <ul className="space-y-2.5 text-xs text-slate-400 pl-0 list-none">
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Unstructured streams of message pings confuse task priority levels.</li>
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Critical 504 webhook crashes and profile locks sit unresolved for hours.</li>
+            <li className="flex items-start gap-3"><span className="text-red-500 font-bold">✕</span> Workforce project bottlenecks are tracked using human opinions instead of logs.</li>
+          </ul>
+        </div>
+
+        {/* The Solution Blocks Grid Layout */}
+        <div className="border-t border-slate-900 pt-8 mb-14">
+          <h2 className="text-base font-bold text-white mb-8">// The Solution ➔ Automation Systems</h2>
+          <div className="space-y-12">
+            
+            {/* Module 1 */}
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">01</div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-white">Phase 1: Raw Dynamic Input</h3>
+                  <p className="text-xs text-cyan-400 mt-0.5 font-medium">Slack Operational Sandbox Sensor</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed pl-12">
+                The entry engine acts as an early-warning monitor. It tracks active channels to capture complex API failures, text dumps, and system alerts, structuring string vectors for the worker nodes.
+              </p>
+              <div className="pl-12 flex flex-wrap gap-2">
+                {['Slack API', 'String Ingestion', 'Payload Capture'].map(badge => (
+                  <span key={badge} className="text-[10px] bg-[#0b0f19] text-zinc-400 px-3 py-1 rounded border border-slate-800/80 font-mono">{badge}</span>
+                ))}
+              </div>
+              <div className="pl-12 pt-2">
+                <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
+                  <img src={images.slack} alt="Slack Stream Payload" className="w-full h-auto rounded-lg block object-cover" />
+                </div>
+              </div>
+            </div>
+
+            {/* Module 2 */}
+            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">02</div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-white">Ops Triage Supervisor</h3>
+                  <p className="text-xs text-cyan-400 mt-0.5 font-medium">Zapier Copilot Parent Manager Agent</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed pl-12">
+                An autonomous processing engine. The agent filters the data arrays, separates critical infrastructure exceptions from backlogs, and dynamically constructs an hour-by-hour triage script.
+              </p>
+              <div className="pl-12 flex flex-wrap gap-1.5">
+                {['Zapier Copilot', 'AI Core', 'Incident Matrix'].map(badge => (
+                  <span key={badge} className="text-[10px] bg-[#0b0f19] text-zinc-400 px-3 py-1 rounded border border-slate-800/80 font-mono">{badge}</span>
+                ))}
+              </div>
+              <div className="pl-12 pt-2">
+                <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
+                  <img src={images.mainAgent} alt="Manager Agent Strategy" className="w-full h-auto rounded-lg block object-cover" />
+                </div>
+              </div>
+            </div>
+
+            {/* Module 3 */}
+            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">03</div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-white">Decentralized Task Routing</h3>
+                  <p className="text-xs text-cyan-400 mt-0.5 font-medium">Gmail Briefing Copywriter Sub-Agent Worker</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed pl-12">
+                To guarantee absolute runtime protection, a strict separation of concerns decoupling handles execution. The main logic manager delegates template layout formatting down to a secondary worker bot.
+              </p>
+              <div className="pl-12 flex flex-wrap gap-1.5">
+                {['Sub-Agents', 'Decoupled Logic', 'Template Engineering'].map(badge => (
+                 <span key={badge} className="text-[10px] bg-[#0b0f19] text-zinc-400 px-3 py-1 rounded border border-slate-800/80 font-mono">{badge}</span>
+                ))}  
+              </div>
+              <div className="pl-12 pt-2">
+                <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
+                  <img src={images.subAgent} alt="Sub-Agent Panel" className="w-full h-auto rounded-lg block object-cover" />
+                </div>
+              </div>
+            </div>
+
+                        {/* Module 4 */}
+            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">04</div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-white">Persistent Audit Registry</h3>
+                  <p className="text-xs text-cyan-400 mt-0.5 font-medium">Multi-Paragraph Google Sheets Log Matrix</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed pl-12">
+                The core analytical data archive. System rules force the tool to write crisp cell formatting blocks, injecting system diagnostics, copy-ready communication messages, and bypass strategies [INDEX_4].
+              </p>
+              <div className="pl-12 flex flex-wrap gap-1.5">
+                {['Google Sheets API', 'Structured Database', 'System Logging'].map(badge => (
+                  <span key={badge} className="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800 font-mono">{badge}</span>
+                ))}
+              </div>
+              <div className="pl-12 pt-2">
+                <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
+                  <img src={images.sheet} alt="Google Sheet Storage Matrix" className="w-full h-auto rounded-lg block object-cover" />
+                </div>
+              </div>
+            </div>
+
+            {/* Module 5 */}
+            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">05</div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-white">Branded Inbox Delivery</h3>
+                  <p className="text-xs text-cyan-400 mt-0.5 font-medium">Executive Branded Intelligence Client Briefing</p>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed pl-12">
+                The programmatic completion of the automated lifecycle. Pushes styled emails containing colored content groupings, summaries, and anchor web elements straight to the phone for review [INDEX_6].
+              </p>
+              <div className="pl-12 flex flex-wrap gap-1.5">
+                {['Gmail SDK', 'Inbox Alerts', 'Branded CSS Blocks'].map(badge => (
+                  <span key={badge} className="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800 font-mono">{badge}</span>
+                ))}
+              </div>
+              <div className="pl-12 pt-2">
+                <div className="bg-[#0b0f19] p-2 rounded-xl border border-slate-900/60 shadow-2xl">
+                  <img src={images.gmail} alt="Final Branded Email Notification" className="w-full h-auto rounded-lg block object-cover" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Output Generation Blocks Layout */}
+        <div className="border-t border-slate-900 pt-8 mb-14">
+          <h2 className="text-base font-bold text-white mb-6">// Output Generation</h2>
+          <div className="space-y-3">
+            <div className="bg-[#0b0f19]/30 p-5 rounded-xl border border-slate-900/80">
+              <div className="text-xs font-bold text-white mb-1">⚙️ Zero Loop Latency Pipeline</div>
+              <p className="text-slate-500 text-[11px] leading-relaxed">Routes complex technical crashes into active execution queues instantly, blocking any idleness across your operations pipelines [INDEX_4].</p>
+            </div>
+            <div className="bg-[#0b0f19]/30 p-5 rounded-xl border border-slate-900/80">
+              <div className="text-xs font-bold text-white mb-1">🔒 Systemized Operations Accountability</div>
+              <p className="text-slate-500 text-[11px] leading-relaxed">Replaces human management bias with proactive data monitors, delivering diagnostic roadmaps completely on autopilot [INDEX_5].</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tools Used Grid */}
+        <div className="border-t border-slate-900 pt-8 mb-14">
+          <h2 className="text-base font-bold text-white mb-4">// Tools Used</h2>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center text-[10px] font-mono font-medium text-slate-400">
+            {['Zapier AI', 'Airtable', 'Google Sheets', 'Gmail API', 'Slack Developer', 'Tailwind CSS'].map(tool => (
+              <div key={tool} className="bg-[#0b0f19] py-2 px-1 rounded border border-slate-900">{tool}</div>
+            ))}
+          </div>
+        </div>
+
+        {/* Lead Capture Footer */}
+        <div className="bg-[#0b0f19]/60 border border-slate-900 p-8 rounded-2xl text-center shadow-2xl">
+          <span className="text-cyan-400 font-mono text-[9px] uppercase tracking-widest bg-cyan-400/5 border border-cyan-400/15 px-2.5 py-1 rounded">Project Complete</span>
+          <h3 className="text-base font-extrabold text-white mt-4 mb-2 tracking-tight">Want a similar automated system for your agency business?</h3>
+          <p className="text-slate-500 text-xs max-w-md mx-auto mb-6 leading-relaxed">
+            Let's link your systems, configure custom parent orchestrators, and deploy worker sub-agent automation nodes to save hours of manual overhead.
+          </p>
+          <a href="https://vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-400 text-slate-950 font-bold text-xs px-6 py-2.5 rounded-lg shadow-xl shadow-cyan-400/10 hover:scale-[1.01] transition-transform duration-200 no-underline">
+            📬 Consult with Nathanael
           </a>
         </div>
 
@@ -268,3 +229,4 @@ const MultiAgentCaseStudy: React.FC = () => {
 };
 
 export default MultiAgentCaseStudy;
+
