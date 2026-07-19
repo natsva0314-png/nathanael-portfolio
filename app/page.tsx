@@ -12,7 +12,8 @@ import ThemeToggle from '@/components/ThemeToggle'
 import { ArrowCounterClockwise, ArrowRight } from '@phosphor-icons/react'
 import SocialLinks from '@/components/SocialLinks'
 import Link from 'next/link'
-import MultiAgentCaseStudy from '@/components/MultiAgentCaseStudy';
+import MultiAgentCaseStudy from '../MultiAgentCaseStudy';
+
 
 function stripMarkdown(text: string): string {
   return text
