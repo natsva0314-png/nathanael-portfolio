@@ -8,10 +8,10 @@ const MultiAgentCaseStudy: React.FC = () => {
 
   const images = {
     slack: "/projects/slack.png",
-    mainAgent: "/projects/agent1.png",
+    mainAgent: "/projects/Agent01.png",
     subAgent: "/projects/agent1sub.png",
-    sheet: "/projects/sheet.png",
-    gmail: "/projects/gmail.png"
+    sheet: "/projects/Sheet1.png",
+    gmail: "/projects/Gmail1.png"
   };
 
   return (
@@ -76,7 +76,7 @@ const MultiAgentCaseStudy: React.FC = () => {
         </div>
 
         {/* The Challenge Block */}
-        <div className="mb-14 border-t border-slate-900 pt-12">
+        <div className="mb-14 border-t border-slate-900 pt-20">
           <h2 className="text-base font-bold text-white mb-4">// The Challenge</h2>
           <p className="text-slate-400 mb-4 leading-relaxed text-xs">
             Scaling digital creator agencies operate round-the-clock, meaning administrative or infrastructure delays directly impact tip revenue pipelines. Manual workflows completely stall under chaotic conditions:
@@ -118,7 +118,7 @@ const MultiAgentCaseStudy: React.FC = () => {
             </div>
 
             {/* Module 2 */}
-            <div className="space-y-4 border-t border-slate-900/50 pt-14">
+            <div className="space-y-4 border-t border-slate-900/50 pt-20">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">02</div>
                 <div className="flex-1">
@@ -142,7 +142,7 @@ const MultiAgentCaseStudy: React.FC = () => {
             </div>
 
             {/* Module 3 */}
-            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+            <div className="space-y-4 border-t border-slate-900/50 pt-20">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">03</div>
                 <div className="flex-1">
@@ -166,7 +166,7 @@ const MultiAgentCaseStudy: React.FC = () => {
             </div>
 
                         {/* Module 4 */}
-            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+            <div className="space-y-4 border-t border-slate-900/50 pt-20">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">04</div>
                 <div className="flex-1">
@@ -190,7 +190,7 @@ const MultiAgentCaseStudy: React.FC = () => {
             </div>
 
             {/* Module 5 */}
-            <div className="space-y-4 border-t border-slate-900/50 pt-10">
+            <div className="space-y-4 border-t border-slate-900/50 pt-20">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs">05</div>
                 <div className="flex-1">
