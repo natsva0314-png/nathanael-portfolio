@@ -35,9 +35,6 @@ const MultiAgentCaseStudy: React.FC = () => {
         </div>
       </nav>
 
-      {/* Main Portfolio Content Case Area */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        
         {/* Category Tag */}
         <div className="flex justify-start mb-4">
           <span className="text-cyan-400 text-xs font-semibold tracking-wider uppercase bg-cyan-950/40 border border-cyan-800/30 px-3 py-1 rounded-full">
