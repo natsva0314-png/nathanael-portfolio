@@ -51,7 +51,7 @@ const MultiAgentCaseStudy: React.FC = () => {
         </div>
 
         {/* Title */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-cyan-400 tracking-tight leading-tight mb-8">
           Autonomous Multi-Agent Crisis Triage &amp; Workforce Governance Engine
         </h1>
 
