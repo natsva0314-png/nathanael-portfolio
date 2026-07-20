@@ -109,22 +109,22 @@ const PLACEHOLDERS = [
   { 
     label: 'AI Recap Email Output', 
     icon: Envelope, 
-    image: 'public/projects/5.png' 
+    image: '/projects/5.png' 
   },
   { 
     label: 'Follow Up Boss Contact with AI Notes', 
     icon: Buildings, 
-    image: 'public/projects/1.png' 
+    image: '/projects/1.png' 
   },
   { 
     label: 'Google Sheets Consultation Log', 
     icon: ChartLineUp, 
-    image: 'public/projects/4.png' 
+    image: '/projects/4.png' 
   },
   { 
     label: 'DocuSign Contract Auto-Generated', 
     icon: FileText, 
-    image: 'public/projects/7.webp' 
+    image: '/projects/7.webp' 
   },
 ]
 
