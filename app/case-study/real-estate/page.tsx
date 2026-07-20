@@ -105,11 +105,13 @@ const SYSTEMS = [
   },
 ]
 
-const PLACEHOLDERS = [
-  { label: 'public/projects/1.png },
-  { label: 'public/projects/3.png },
-  { label: 'public/projects/4.png },
-  { label: 'public/projects/5.png },
+const images = [
+  image1: "/projects/Sheet1.png",
+  image2: "/projects/Gmail1.png",
+  image3: "/projects/3.png",
+  image4: "/projects/4.png",
+  image5: "/projects/5.png",
+  image6: "/projects/6.png",
 ]
 
 const RESULTS = [
