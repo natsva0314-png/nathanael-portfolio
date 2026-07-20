@@ -332,7 +332,7 @@ export default function Home() {
                   transition={{ delay: 0.9, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   className="w-full mt-4"
                 >
-                  <Link href="/case-study/real-estate" style={{ textDecoration: 'none' }}>
+                  <Link href="/case-study/n8n-workflow" style={{ textDecoration: 'none' }}>
                     <motion.div
                       whileHover={{ scale: 1.015, y: -2 }}
                       whileTap={{ scale: 0.98 }}
@@ -348,7 +348,7 @@ export default function Home() {
                         className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
                         style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
                       >
-                        ★
+                        🔗
                       </div>
                       <div className="flex-1 min-w-0 text-left">
                         <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--accent)' }}>
