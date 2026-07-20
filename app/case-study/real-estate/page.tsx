@@ -395,96 +395,47 @@ export default function RealEstateCaseStudy() {
           </div>
         </Section>
 
-        {/* ── Output Generation ─────────────────── */}
-<Section title="Output Generation">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-    {/* Image 1 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.sheet}
-        alt="Zero Loop Latency Pipeline"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Zero Loop Latency Pipeline
-      </div>
-    </div>
+               {/* ── Output Screenshots (Dynamically Rendered) ─────────────────── */}
+        <Section title="Output Screenshots">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {PLACEHOLDERS.map((placeholder) => {
+              const Icon = placeholder.icon;
+              // Check if the current placeholder item contains a local directory image path mapping
+              const hasImage = 'image' in placeholder && placeholder.image;
 
-    {/* Image 2 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.gmail}
-        alt="Systemized Accountability"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Systemized Operations Accountability
-      </div>
-    </div>
+              return (
+                <motion.div
+                  key={placeholder.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className={`rounded-2xl overflow-hidden flex flex-col ${hasImage ? 'p-2 bg-[#0b0f19]/40 border border-slate-900/60 shadow-2xl' : 'py-14 justify-center items-center gap-3'}`}
+                  style={!hasImage ? {
+                    background: 'var(--bg-surface)',
+                    border: '1px dashed var(--border-accent)',
+                  } : undefined}
+                >
+                  {hasImage ? (
+                    <img 
+                      src={placeholder.image} 
+                      alt={placeholder.label} 
+                      className="w-full h-auto rounded-xl block object-cover" 
+                    />
+                  ) : (
+                    <>
+                      <Icon size={28} weight="thin" style={{ color: 'var(--accent)', opacity: 0.6 }} />
+                      <span className="text-xs text-center px-4" style={{ color: 'var(--text-secondary)' }}>
+                        [{placeholder.label}]
+                      </span>
+                    </>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </Section>
 
-    {/* Image 3 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.image3}   // ← Update in images object
-        alt="Image 3"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Output Title 3
-      </div>
-    </div>
-
-    {/* Image 4 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.image4}
-        alt="Image 4"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Output Title 4
-      </div>
-    </div>
-
-    {/* Image 5 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.image5}
-        alt="Image 5"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Output Title 5
-      </div>
-    </div>
-
-    {/* Image 6 */}
-    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
-      <Image
-        src={images.image6}
-        alt="Image 6"
-        width={800}
-        height={500}
-        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
-      />
-      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
-        Output Title 6
-      </div>
-    </div>
-
-  </div>
-</Section>
 
         {/* ── Tools ─────────────────────────────────────────────── */}
         <Section title="Tools & Stack">
