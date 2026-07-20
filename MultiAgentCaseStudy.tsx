@@ -248,7 +248,7 @@ const MultiAgentCaseStudy: React.FC = () => {
           <p className="text-slate-500 text-xs max-w-md mx-auto mb-6 leading-relaxed">
             Let's link your systems, configure custom parent orchestrators, and deploy worker sub-agent automation nodes to save hours of manual overhead.
           </p>
-          <a href="https://vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-400 text-slate-950 font-bold text-xs px-6 py-2.5 rounded-lg shadow-xl shadow-cyan-400/10 hover:scale-[1.01] transition-transform duration-200 no-underline">
+          <a href="https://calendly.com/natsva0314/30min?month=2026-07" target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-400 text-slate-950 font-bold text-xs px-6 py-2.5 rounded-lg shadow-xl shadow-cyan-400/10 hover:scale-[1.01] transition-transform duration-200 no-underline">
             📬 Consult with Nathanael
           </a>
         </div>
