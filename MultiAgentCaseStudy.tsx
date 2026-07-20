@@ -175,7 +175,7 @@ const MultiAgentCaseStudy: React.FC = () => {
                 </div>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-12">
-                The core analytical data archive. System rules force the tool to write crisp cell formatting blocks, injecting system diagnostics, copy-ready communication messages, and bypass strategies [INDEX_4].
+                The core analytical data archive. System rules force the tool to write crisp cell formatting blocks, injecting system diagnostics, copy-ready communication messages, and bypass strategies.
               </p>
               <div className="pl-12 flex flex-wrap gap-1.5">
                 {['Google Sheets API', 'Structured Database', 'System Logging'].map(badge => (
@@ -199,7 +199,7 @@ const MultiAgentCaseStudy: React.FC = () => {
                 </div>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-12">
-                The programmatic completion of the automated lifecycle. Pushes styled emails containing colored content groupings, summaries, and anchor web elements straight to the phone for review [INDEX_6].
+                The programmatic completion of the automated lifecycle. Pushes styled emails containing colored content groupings, summaries, and anchor web elements straight to the phone for review.
               </p>
               <div className="pl-12 flex flex-wrap gap-1.5">
                 {['Gmail SDK', 'Inbox Alerts', 'Branded CSS Blocks'].map(badge => (
@@ -222,11 +222,11 @@ const MultiAgentCaseStudy: React.FC = () => {
           <div className="space-y-3">
             <div className="bg-[#0b0f19]/30 p-5 rounded-xl border border-slate-900/80">
               <div className="text-xs font-bold text-white mb-1">⚙️ Zero Loop Latency Pipeline</div>
-              <p className="text-slate-500 text-[11px] leading-relaxed">Routes complex technical crashes into active execution queues instantly, blocking any idleness across your operations pipelines [INDEX_4].</p>
+              <p className="text-slate-500 text-[11px] leading-relaxed">Routes complex technical crashes into active execution queues instantly, blocking any idleness across your operations pipelines.</p>
             </div>
             <div className="bg-[#0b0f19]/30 p-5 rounded-xl border border-slate-900/80">
               <div className="text-xs font-bold text-white mb-1">🔒 Systemized Operations Accountability</div>
-              <p className="text-slate-500 text-[11px] leading-relaxed">Replaces human management bias with proactive data monitors, delivering diagnostic roadmaps completely on autopilot [INDEX_5].</p>
+              <p className="text-slate-500 text-[11px] leading-relaxed">Replaces human management bias with proactive data monitors, delivering diagnostic roadmaps completely on autopilot.</p>
             </div>
           </div>
         </div>
