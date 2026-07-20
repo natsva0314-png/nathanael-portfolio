@@ -105,13 +105,27 @@ const SYSTEMS = [
   },
 ]
 
-const images = [
-  image1: "/projects/Sheet1.png",
-  image2: "/projects/Gmail1.png",
-  image3: "/projects/3.png",
-  image4: "/projects/4.png",
-  image5: "/projects/5.png",
-  image6: "/projects/6.png",
+const PLACEHOLDERS = [
+  { 
+    label: 'AI Recap Email Output', 
+    icon: Envelope, 
+    image: 'public/projects/5.png' 
+  },
+  { 
+    label: 'Follow Up Boss Contact with AI Notes', 
+    icon: Buildings, 
+    image: 'public/projects/1.png' 
+  },
+  { 
+    label: 'Google Sheets Consultation Log', 
+    icon: ChartLineUp, 
+    image: 'public/projects/4.png' 
+  },
+  { 
+    label: 'DocuSign Contract Auto-Generated', 
+    icon: FileText, 
+    image: 'public/projects/7.webp' 
+  },
 ]
 
 const RESULTS = [
