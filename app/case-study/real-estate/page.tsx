@@ -98,8 +98,15 @@ const SYSTEMS = [
     steps: '7 workflows across 3 automation engines',
     desc: 'Three intelligence engines running continuously: Hot Lead Conversion, New Lead Intake & Scoring, and Past Client Relationship Management. AI scores every lead urgency 1–10, triggers hot-lead recovery at 14/30/60 days, manages 13 custom AI fields, and maintains a full audit trail in Google Sheets.',
     tools: ['Zapier', 'Claude AI', 'Follow Up Boss', 'Gmail', 'Google Sheets'],
-    image: '/projects/re-crm-engine.png',
-    imageLabel: 'Workflow Diagram — 3 Engines',
+        workflows: [
+      { label: 'New Lead Intake', path: '/projects/wf01.png' },
+      { label: 'Lead Scoring', path: '/projects/wf2.png' },
+      { label: 'Hot Lead Recovery (14d)', path: '/projects/wf3.png' },
+      { label: 'Hot Lead Recovery (30d)', path: '/projects/re-crm-recovery-30.png' },
+      { label: 'Hot Lead Recovery (60d)', path: '/projects/re-crm-recovery-60.png' },
+      { label: 'Past Client Relationship', path: '/projects/re-crm-past-client.png' },
+      { label: 'Google Sheets Audit', path: '/projects/re-crm-audit.png' },
+    ],
     icon: Robot,
     metric: '13 AI fields, full audit trail',
   },
@@ -370,26 +377,8 @@ export default function RealEstateCaseStudy() {
                   </div>
                 </div>
 
-                {/* Workflow screenshot */}
-                <div
-                  className="relative mx-4 mb-4 md:mx-6 md:mb-6 rounded-xl overflow-hidden"
-                  style={{ border: '1px solid var(--border)' }}
-                >
-                  <Image
-                    src={sys.image}
-                    alt={sys.imageLabel}
-                    width={900}
-                    height={520}
-                    className="w-full h-auto object-contain"
-                    style={{ background: 'var(--bg-elevated)' }}
-                  />
-                  <div
-                    className="absolute bottom-0 left-0 right-0 px-3 py-2 text-[10px] font-medium"
-                    style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border)', color: 'var(--text-secondary)' }}
-                  >
-                    [{sys.imageLabel}]
-                  </div>
-                </div>
+               <WorkflowDisplay sys={sys} />
+
               </motion.div>
             ))}
           </div>
@@ -564,4 +553,68 @@ function Section({ title, children }: { title: string; children: React.ReactNode
       {children}
     </motion.section>
   )
+}
+function WorkflowDisplay({ sys }: { sys: any }) {
+  // Scenario A: If this project contains the 7-workflow multi-tab setup
+  if (sys.workflows && sys.workflows.length > 0) {
+    const [activeIndex, setActiveIndex] = useState(0)
+
+    return (
+      <div className="border-t border-slate-800">
+        {/* Workflow Tab Selection Banner */}
+        <div className="p-4 md:p-6 flex flex-wrap gap-2 border-b border-slate-800">
+          {sys.workflows.map((wf: any, idx: number) => {
+            const isActive = activeIndex === idx
+            return (
+              <button
+                key={wf.label}
+                onClick={() => setActiveIndex(idx)}
+                className={`text-[11px] md:text-xs px-3 py-1.5 rounded-full font-medium transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-[#04d9ff]/10 border border-[#04d9ff]/30 text-[#04d9ff]'
+                    : 'bg-transparent border border-slate-800 text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                {wf.label}
+              </button>
+            )
+          })}
+        </div>
+        
+        {/* Dynamic Image Display Area */}
+        <div className="relative mx-4 my-4 md:mx-6 md:my-6 rounded-xl overflow-hidden border border-slate-800">
+          <Image
+            src={sys.workflows[activeIndex].path}
+            alt={sys.workflows[activeIndex].label}
+            width={900}
+            height={520}
+            className="w-full h-auto object-contain bg-[#111827]"
+          />
+          <div className="absolute bottom-0 left-0 right-0 px-3 py-2 text-[10px] font-medium bg-[#0b0f19] border-t border-slate-800 text-slate-400">
+            [{sys.workflows[activeIndex].label}]
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Scenario B: Fallback logic for your older projects using a standard single image
+  if (sys.image) {
+    return (
+      <div className="relative mx-4 mb-4 md:mx-6 md:mb-6 rounded-xl overflow-hidden border border-slate-800">
+        <Image
+          src={sys.image}
+          alt={sys.imageLabel || sys.title}
+          width={900}
+          height={520}
+          className="w-full h-auto object-contain bg-[#111827]"
+        />
+        <div className="absolute bottom-0 left-0 right-0 px-3 py-2 text-[10px] font-medium bg-[#0b0f19] border-t border-slate-800 text-slate-400">
+          [{sys.imageLabel || sys.title}]
+        </div>
+      </div>
+    )
+  }
+
+  return null
 }
