@@ -106,10 +106,10 @@ const SYSTEMS = [
 ]
 
 const PLACEHOLDERS = [
-  { label: 'AI Recap Email Output', icon: Envelope },
-  { label: 'Follow Up Boss Contact with AI Notes', icon: Buildings },
-  { label: 'Google Sheets Consultation Log', icon: ChartLineUp },
-  { label: 'DocuSign Contract Auto-Generated', icon: FileText },
+  { label: 'public/projects/1.png },
+  { label: 'public/projects/3.png },
+  { label: 'public/projects/4.png },
+  { label: 'public/projects/5.png },
 ]
 
 const RESULTS = [
@@ -379,30 +379,96 @@ export default function RealEstateCaseStudy() {
           </div>
         </Section>
 
-        {/* ── Output Screenshots (placeholders) ─────────────────── */}
-        <Section title="Output Screenshots">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {PLACEHOLDERS.map(({ label, icon: Icon }) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="rounded-2xl flex flex-col items-center justify-center gap-3 py-14"
-                style={{
-                  background: 'var(--bg-surface)',
-                  border: '1px dashed var(--border-accent)',
-                }}
-              >
-                <Icon size={28} weight="thin" style={{ color: 'var(--accent)', opacity: 0.6 }} />
-                <span className="text-xs text-center px-4" style={{ color: 'var(--text-secondary)' }}>
-                  [{label}]
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </Section>
+        {/* ── Output Generation ─────────────────── */}
+<Section title="Output Generation">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    {/* Image 1 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.sheet}
+        alt="Zero Loop Latency Pipeline"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Zero Loop Latency Pipeline
+      </div>
+    </div>
+
+    {/* Image 2 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.gmail}
+        alt="Systemized Accountability"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Systemized Operations Accountability
+      </div>
+    </div>
+
+    {/* Image 3 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.image3}   // ← Update in images object
+        alt="Image 3"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Output Title 3
+      </div>
+    </div>
+
+    {/* Image 4 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.image4}
+        alt="Image 4"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Output Title 4
+      </div>
+    </div>
+
+    {/* Image 5 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.image5}
+        alt="Image 5"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Output Title 5
+      </div>
+    </div>
+
+    {/* Image 6 */}
+    <div className="rounded-3xl overflow-hidden bg-[#0a0c1a] border border-slate-800 group">
+      <Image
+        src={images.image6}
+        alt="Image 6"
+        width={800}
+        height={500}
+        className="w-full h-auto transition-transform group-hover:scale-[1.02]"
+      />
+      <div className="p-5 text-sm text-cyan-400 border-t border-slate-800">
+        Output Title 6
+      </div>
+    </div>
+
+  </div>
+</Section>
 
         {/* ── Tools ─────────────────────────────────────────────── */}
         <Section title="Tools & Stack">
