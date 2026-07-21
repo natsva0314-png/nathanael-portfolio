@@ -280,10 +280,10 @@ export default function RealEstateCaseStudy() {
             </p>
             <ul className="space-y-3">
               {[
-                'High-Velocity Multi-Task Ingestion: Dozens of competing operational strings arrive simultaneously, hiding critical server drops behind routine status chatter.'  
+                'High-Velocity Multi-Task Ingestion: Dozens of competing operational strings arrive simultaneously, hiding critical server drops behind routine status chatter.',
                 'The First-Hour Management Bottleneck: Human sorting limits force a 60-minute processing delay before actionable triage plans can even be drafted.Subjective Workforce Intervention: Escalating system blockages and team rebalancing are handled through emotional arguments rather than clear relational database thresholds.',
                 'Subjective Workforce Intervention: Escalating system blockages and team rebalancing are handled through emotional arguments rather than clear relational database thresholds.',
-              ].map((item) => (
+                  ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                   <span
                     className="mt-0.5 w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px]"
