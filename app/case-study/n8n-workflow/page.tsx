@@ -228,7 +228,7 @@ export default function RealEstateCaseStudy() {
           >
             {[
               { icon: Robot, text: 'Multi-Agent' },
-              { icon: Zap, text: 'Speed Support' },
+              { icon: Rocket, text: 'Speed Support' },
               { icon: CheckCircle, text: 'AI Automation Specialist' },
             ].map(({ icon: Icon, text }) => (
               <div
