@@ -53,94 +53,74 @@ function AnimatedStat({ to, prefix = '', suffix = '', duration = 1.8 }: {
 }
 
 const TOOLS = [
-  'Zapier', 'Claude AI', 'Follow Up Boss', 'Gmail API',
-  'Google Calendar', 'Google Sheets', 'DocuSign API',
-  'Fyxer AI', 'Google Business Profile', 'Curaytor',
+  'Zapier', 'Zapier Agents', 'Airtable', 'Gmail API',
+  'Slack Developer', 'Google Sheets',
 ]
 
 const SYSTEMS = [
   {
     num: '01',
-    title: 'Buyer Consult SOP Automation',
-    steps: '17-step Zapier workflow',
-    desc: 'Triggered by a single Gmail label. Claude AI extracts buyer details from meeting summaries, sends a personalized 10-point recap email, creates a CRM contact with consultation notes, generates a DocuSign contract, and logs everything to Google Sheets — automatically.',
-    tools: ['Zapier', 'Claude AI', 'Gmail', 'Google Calendar', 'Follow Up Boss', 'DocuSign', 'Google Sheets'],
-    image: '/projects/re-buyer-consult.png',
-    imageLabel: 'Buyer Consult Zap — 17 Steps',
+    title: 'Phase 1: Raw Dynamic Input',
+    steps: 'Slack Operational Sandbox Sensor',
+    desc: 'The entry engine acts as an early-warning monitor. It tracks active channels to capture complex API failures, text dumps, and system alerts, structuring string vectors for the worker nodes.',
+    tools: ['Zapier', 'Claude AI', 'Gmail', 'Slack API', 'String Ingestion', 'Payload Capture', 'Google Sheets'],
+    image: '/projects/slack.png',
+    imageLabel: 'Slack Channel Message',
     icon: FileText,
-    metric: '100% consultations automated',
+    metric: 'Compiled Messages',
   },
   {
     num: '02',
-    title: 'Website Lead Auto-Responder',
-    steps: 'Speed to action: 9 hrs → seconds',
-    desc: 'Detects new website leads the moment they hit Follow Up Boss. Claude AI writes a personalized welcome email in seconds and creates an immediate follow-up task in the CRM — so no lead goes cold, even during vacation.',
-    tools: ['Zapier', 'Claude AI', 'Follow Up Boss', 'Gmail'],
-    image: '/projects/re-google-sheets.png',
-    imageLabel: 'Lead Auto-Responder Workflow',
+    title: 'Ops Triage Supervisor',
+    steps: 'Zapier Copilot Parent Manager Agent',
+    desc: 'An autonomous processing engine. The agent filters the data arrays, separates critical infrastructure exceptions from backlogs, and dynamically constructs an hour-by-hour triage script.',
+    tools: ['Zapier Copilot', 'AI Core', 'Incident Matrix'],
+    image: '/projects/Agent01.png',
+    imageLabel: 'Manager Agent',
     icon: Lightning,
-    metric: 'Zero unactioned leads',
+    metric: 'Main Architect',
   },
   {
     num: '03',
-    title: 'Google Review Auto-Responder',
-    steps: 'AI responds in the client\'s exact voice',
-    desc: 'Every new Google review — 1 star or 5 star — is detected automatically. Claude AI crafts an SEO-optimized, brand-authentic reply based on the star rating, posts it to Google Business Profile, and notifies via Gmail.',
-    tools: ['Zapier', 'Claude AI', 'Google Business Profile', 'Gmail'],
-    image: '/projects/re-google-review.png',
-    imageLabel: 'Review Auto-Responder Workflow',
+    title: 'Decentralized Task Routing',
+    steps: 'Gmail Briefing Copywriter Sub-Agent Worker',
+    desc: 'To guarantee absolute runtime protection, a strict separation of concerns decoupling handles execution. The main logic manager delegates template layout formatting down to a secondary worker bot.',
+    tools: ['Zapier', 'Sub-Agents', 'Decoupled Logice', 'Gmail', 'Template Engineering'],
+    image: '/projects/Gmail1.png',
+    imageLabel: 'Sub Agent',
     icon: Star,
-    metric: '100% of reviews answered',
+    metric: '100% email sent',
   },
   {
     num: '04',
-    title: 'Claude + CRM Integration',
-    steps: '7 workflows across 3 automation engines',
-    desc: 'Three intelligence engines running continuously: Hot Lead Conversion, New Lead Intake & Scoring, and Past Client Relationship Management. AI scores every lead urgency 1–10, triggers hot-lead recovery at 14/30/60 days, manages 13 custom AI fields, and maintains a full audit trail in Google Sheets.',
-    tools: ['Zapier', 'Claude AI', 'Follow Up Boss', 'Gmail', 'Google Sheets'],
-        workflows: [
-      { label: 'New Lead Intake', path: '/projects/wf01.png' },
-      { label: 'Engagement Trigger', path: '/projects/wf2.png' },
-      { label: 'Hot Lead Conversion', path: '/projects/wf3.png' },
-      { label: 'Post Call Summary', path: '/projects/wf4.png' },
-      { label: 'Past Client Snapshot', path: '/projects/wf5.png' },
-      { label: 'Past Client QCheck-in', path: '/projects/wf6.png' },
-      { label: 'Hot Lead Aging', path: '/projects/wf7.png' },
-    ],
-    icon: Robot,
-    metric: '13 AI fields, full audit trail',
+    title: 'Persistent Audit Registry',
+    steps: 'Multi-Paragraph Google Sheets Log Matrix',
+    desc: 'The core analytical data archive. System rules force the tool to write crisp cell formatting blocks, injecting system diagnostics, copy-ready communication messages, and bypass strategies.',
+    tools: ['Zapier', 'Google Sheets API', 'Structured Database', 'System Logging'],
+    image: '/projects/agent1sub.png',
+    imageLabel: 'Sub Agent',
+    icon: Star,
+    metric: '100% email sent',
   },
-]
-
-const PLACEHOLDERS = [
-  { 
-    label: 'AI Recap Email Output', 
-    icon: Envelope, 
-    image: '/projects/5.png' 
-  },
-  { 
-    label: 'Follow Up Boss Contact with AI Notes', 
-    icon: Buildings, 
-    image: '/projects/1.png' 
-  },
-  { 
-    label: 'Google Sheets Consultation Log', 
-    icon: ChartLineUp, 
-    image: '/projects/4.png' 
-  },
-  { 
-    label: 'DocuSign Contract Auto-Generated', 
-    icon: FileText, 
-    image: '/projects/7.webp' 
+  {
+    num: '05',
+    title: 'Branded Inbox Delivery',
+    steps: 'Executive Branded Intelligence Client Briefing',
+    desc: 'The programmatic completion of the automated lifecycle. Pushes styled emails containing colored content groupings, summaries, and anchor web elements straight to the phone for review.',
+    tools: ['Zapier', 'Gmail SDK', 'Inbox Alerts', 'Branded CSS Blocks'],
+    image: '/projects/Gmail1.png',
+    imageLabel: 'Gmail Message',
+    icon: Star,
+    metric: 'Daily Update Briefing',
   },
 ]
 
 const RESULTS = [
-  { value: 0, display: 'Seconds', label: 'Speed to action (was 9 hrs)', prefix: '' },
-  { value: 30, suffix: '+', label: 'Hours saved every week', prefix: '' },
-  { value: 4, suffix: '', label: 'Automation systems built', prefix: '' },
-  { value: 7, suffix: '', label: 'Workflows in CRM integration', prefix: '' },
-  { value: 100, suffix: '%', label: 'Consultations automated', prefix: '' },
+  { value: 0, display: 'Seconds', label: 'Speed to action (was 3 hrs)', prefix: '' },
+  { value: 20, suffix: '+', label: 'Hours saved every week', prefix: '' },
+  { value: 2, suffix: '', label: 'Automation system built', prefix: '' },
+  { value: 2, suffix: '', label: 'Agent Running', prefix: '' },
+  { value: 100, suffix: '%', label: 'Message Sorting automated', prefix: '' },
 ]
 
 const fadeUp = {
@@ -237,9 +217,9 @@ export default function RealEstateCaseStudy() {
             className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4"
             style={{ color: 'var(--text-primary)' }}
           >
-            AI Automation System for a{' '}
-            <span style={{ color: 'var(--accent)' }}>$70M/year</span>{' '}
-            Real Estate Brokerage
+            Autonomous{' '}
+            <span style={{ color: 'var(--accent)' }}>Multi-Agent</span>{' '}
+            Crisis Triage & Workforce Governance Engine
           </motion.h1>
 
           <motion.div
@@ -268,10 +248,10 @@ export default function RealEstateCaseStudy() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-14"
           >
             {[
-              { value: '4', label: 'Systems Built' },
-              { value: '9hrs → Seconds', label: 'Speed to Action' },
-              { value: '30+', label: 'Hrs Saved / Week' },
-              { value: '$70M', label: 'Client Revenue' },
+              { value: '3 Hrs', label: 'Manual Triage Buffer' },
+              { value: '99.5% Success', label: 'Operational Velocity' },
+              { value: '3s', label: 'Automated Loop Time' },
+              { value: '0% Bias', label: 'Data Governance' },
             ].map((s) => (
               <div
                 key={s.label}
@@ -296,16 +276,13 @@ export default function RealEstateCaseStudy() {
             style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}
           >
             <p className="text-sm mb-5" style={{ color: 'var(--text-secondary)' }}>
-              A high-volume US real estate brokerage was scaling fast — but their operations hadn&apos;t caught up.
+              Scaling digital creator agencies operate round-the-clock, meaning administrative or infrastructure delays directly impact tip revenue pipelines. Manual workflows completely stall under chaotic conditions:
             </p>
             <ul className="space-y-3">
               {[
-                '9-hour speed-to-action on new website leads',
-                '30+ hours per week of manual admin work across the team',
-                'Every buyer consultation processed manually — error-prone and slow',
-                'Google reviews going unanswered, hurting local SEO',
-                '30,000+ cold contacts with no automated follow-up system',
-                'Leads going completely cold whenever the owner was on vacation',
+                'High-Velocity Multi-Task Ingestion: Dozens of competing operational strings arrive simultaneously, hiding critical server drops behind routine status chatter.'  
+                'The First-Hour Management Bottleneck: Human sorting limits force a 60-minute processing delay before actionable triage plans can even be drafted.Subjective Workforce Intervention: Escalating system blockages and team rebalancing are handled through emotional arguments rather than clear relational database thresholds.',
+                'Subjective Workforce Intervention: Escalating system blockages and team rebalancing are handled through emotional arguments rather than clear relational database thresholds.',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                   <span
@@ -322,7 +299,7 @@ export default function RealEstateCaseStudy() {
         </Section>
 
         {/* ── Solution ─────────────────────────────────────────── */}
-        <Section title="The Solution — 4 Automation Systems">
+        <Section title="The Solution — Automation Systems">
           <div className="space-y-8">
             {SYSTEMS.map((sys, i) => (
               <motion.div
@@ -453,12 +430,12 @@ export default function RealEstateCaseStudy() {
         <Section title="Results">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Speed to action', top: '9 hrs', bottom: 'Seconds', accent: true },
+              { label: 'Speed to action', top: '3 hrs', bottom: 'Seconds', accent: true },
               { label: 'Hours saved / week', num: 30, suffix: '+', bottom: 'Manual hours eliminated' },
-              { label: 'Automation systems', num: 4, suffix: '', bottom: 'Running simultaneously' },
-              { label: 'CRM workflows', num: 7, suffix: '', bottom: 'Across 3 intelligence engines' },
-              { label: 'Consultations automated', num: 100, suffix: '%', bottom: 'Zero manual processing' },
-              { label: 'Google reviews answered', num: 100, suffix: '%', bottom: 'In client\'s exact voice' },
+              { label: 'Automation systems', num: 2, suffix: '', bottom: 'Running simultaneously' },
+              { label: 'Agent Running', num: 2, suffix: '', bottom: 'Across engines' },
+              { label: 'Message sorting automated', num: 100, suffix: '%', bottom: 'Zero manual sorting' },
+              { label: 'Bulk messages answered', num: 100, suffix: '%', bottom: 'In day to day basis' },
             ].map((r, i) => (
               <motion.div
                 key={r.label}
@@ -506,10 +483,10 @@ export default function RealEstateCaseStudy() {
             style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
           >
             <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent)' }} />
-            Real Estate Automation
+            Multi-Agent Automation
           </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3" style={{ color: 'var(--text-primary)' }}>
-            Want a similar system for your real estate business?
+            Want a similar system for your business?
           </h2>
           <p className="text-sm max-w-md mx-auto mb-8" style={{ color: 'var(--text-secondary)' }}>
             Book a free 30-minute strategy call and I&apos;ll map out exactly which automations will have the biggest impact for your brokerage.
