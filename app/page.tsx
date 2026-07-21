@@ -299,32 +299,6 @@ export default function Home() {
                     </motion.div>
                   </Link>
                 </motion.div>
-                {/* Autonomous Multi-Agent AI Infrastructure Card */}
-<Link href="/case-study/multi-agent" style={{ textDecoration: 'none' }}>
-  <motion.div
-    whileHover={{ scale: 1.015, y: -2 }}
-    whileTap={{ scale: 0.98 }}
-    className="w-full rounded-2xl p-4 flex items-center justify-between gap-4 transition-all duration-200 mt-4"
-    style={{
-      background: 'var(--bg-surface)',
-      border: '1px solid var(--border-accent)',
-      boxShadow: '0 0 28px var(--accent-glow)',
-      cursor: 'pointer',
-    }}
-  >
-    <div className="flex items-center gap-4 min-w-0 flex-1">
-      <div className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold" style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--text-accent)' }}>
-        🤖
-      </div>
-      <div className="min-w-0 text-left">
-        <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--text-muted)' }}>AI AUTOMATION INFRASTRUCTURE</p>
-        <h4 className="text-sm font-bold text-white truncate">Autonomous Multi-Agent Crisis Triage Engine</h4>
-        <p className="text-xs text-slate-400 mt-1 line-clamp-1">Decentralized manager-worker network automating operations triage and workforce governance.</p>
-      </div>
-    </div>
-    <ArrowRight size={16} weight="bold" style={{ color: 'var(--accent)', flexShrink: 0 }} />
-  </motion.div>
-</Link>
                  {/* Featured Case Study Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
@@ -348,17 +322,17 @@ export default function Home() {
                         className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
                         style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
                       >
-                        🔗
+                        🤖
                       </div>
                       <div className="flex-1 min-w-0 text-left">
                         <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--accent)' }}>
-                          Featured Case Study
+                          AI AUTOMATION INFRASTRUCTURE
                         </p>
                         <p className="text-sm font-semibold leading-tight truncate" style={{ color: 'var(--text-primary)' }}>
-                          $70M/year Real Estate Brokerage — 4 AI Systems
+                          Autonomous Multi-Agent 
                         </p>
                         <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>
-                          9 hrs → seconds · 30+ hrs/week saved · 100% automated
+                          Decentralized manager-worker network automating operations triage
                         </p>
                       </div>
                       <ArrowRight size={16} weight="bold" style={{ color: 'var(--accent)', flexShrink: 0 }} />
