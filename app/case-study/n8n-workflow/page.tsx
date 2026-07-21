@@ -361,47 +361,6 @@ export default function RealEstateCaseStudy() {
           </div>
         </Section>
 
-               {/* ── Output Screenshots (Dynamically Rendered) ─────────────────── */}
-        <Section title="Output Screenshots">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {PLACEHOLDERS.map((placeholder) => {
-              const Icon = placeholder.icon;
-              // Check if the current placeholder item contains a local directory image path mapping
-              const hasImage = 'image' in placeholder && placeholder.image;
-
-              return (
-                <motion.div
-                  key={placeholder.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-40px' }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className={`rounded-2xl overflow-hidden flex flex-col ${hasImage ? 'p-2 bg-[#0b0f19]/40 border border-slate-900/60 shadow-2xl' : 'py-14 justify-center items-center gap-3'}`}
-                  style={!hasImage ? {
-                    background: 'var(--bg-surface)',
-                    border: '1px dashed var(--border-accent)',
-                  } : undefined}
-                >
-                  {hasImage ? (
-                    <img 
-                      src={placeholder.image} 
-                      alt={placeholder.label} 
-                      className="w-full h-auto rounded-xl block object-cover" 
-                    />
-                  ) : (
-                    <>
-                      <Icon size={28} weight="thin" style={{ color: 'var(--accent)', opacity: 0.6 }} />
-                      <span className="text-xs text-center px-4" style={{ color: 'var(--text-secondary)' }}>
-                        [{placeholder.label}]
-                      </span>
-                    </>
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
-        </Section>
-
 
         {/* ── Tools ─────────────────────────────────────────────── */}
         <Section title="Tools & Stack">
