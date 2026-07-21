@@ -219,7 +219,7 @@ export default function RealEstateCaseStudy() {
           >
             Autonomous{' '}
             <span style={{ color: 'var(--accent)' }}>Multi-Agent</span>{' '}
-            Crisis Triage & Workforce Governance Engine
+            Crisis Triage
           </motion.h1>
 
           <motion.div
@@ -227,8 +227,8 @@ export default function RealEstateCaseStudy() {
             className="flex flex-wrap items-center gap-3 mb-10"
           >
             {[
-              { icon: Buildings, text: 'US Real Estate Brokerage' },
-              { icon: Gear, text: 'Plymouth, MA, USA' },
+              { icon: Robot, text: 'Multi-Agent' },
+              { icon: Support, text: 'Speed Support' },
               { icon: CheckCircle, text: 'AI Automation Specialist' },
             ].map(({ icon: Icon, text }) => (
               <div
