@@ -243,7 +243,6 @@ export default function Home() {
                     { value: '50+', label: 'Automations' },
                     { value: '500+', label: 'Hrs saved/mo' },
                     { value: '99.5%', label: 'Success rate' },
-                    { value: '$70M+', label: 'Client Revenue' },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <p
