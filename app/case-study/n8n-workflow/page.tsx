@@ -86,7 +86,7 @@ const SYSTEMS = [
     steps: 'Gmail Briefing Copywriter Sub-Agent Worker',
     desc: 'To guarantee absolute runtime protection, a strict separation of concerns decoupling handles execution. The main logic manager delegates template layout formatting down to a secondary worker bot.',
     tools: ['Zapier', 'Sub-Agents', 'Decoupled Logice', 'Gmail', 'Template Engineering'],
-    image: '/projects/Gmail1.png',
+    image: '/projects/agent1sub.png',
     imageLabel: 'Sub Agent',
     icon: Star,
     metric: '100% email sent',
@@ -97,7 +97,7 @@ const SYSTEMS = [
     steps: 'Multi-Paragraph Google Sheets Log Matrix',
     desc: 'The core analytical data archive. System rules force the tool to write crisp cell formatting blocks, injecting system diagnostics, copy-ready communication messages, and bypass strategies.',
     tools: ['Zapier', 'Google Sheets API', 'Structured Database', 'System Logging'],
-    image: '/projects/agent1sub.png',
+    image: '/projects/Sheet1.png',
     imageLabel: 'Sub Agent',
     icon: Star,
     metric: '100% email sent',
@@ -390,7 +390,7 @@ export default function RealEstateCaseStudy() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Speed to action', top: '3 hrs', bottom: 'Seconds', accent: true },
-              { label: 'Hours saved / week', num: 30, suffix: '+', bottom: 'Manual hours eliminated' },
+              { label: 'Hours saved / week', num: 20, suffix: '+', bottom: 'Manual hours eliminated' },
               { label: 'Automation systems', num: 2, suffix: '', bottom: 'Running simultaneously' },
               { label: 'Agent Running', num: 2, suffix: '', bottom: 'Across engines' },
               { label: 'Message sorting automated', num: 100, suffix: '%', bottom: 'Zero manual sorting' },
