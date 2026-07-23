@@ -339,7 +339,7 @@ export default function Home() {
                   </Link>
                 </motion.div>
 
-                {/* Featured Case Study Card */}
+                 {/* Featured Case Study Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -362,17 +362,17 @@ export default function Home() {
                         className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
                         style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
                       >
-                        🤖
+                        ★
                       </div>
                       <div className="flex-1 min-w-0 text-left">
                         <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--accent)' }}>
-                          AI AUTOMATION INFRASTRUCTURE
+                          Featured Case Study
                         </p>
                         <p className="text-sm font-semibold leading-tight truncate" style={{ color: 'var(--text-primary)' }}>
-                          Autonomous Multi-Agent 
+                          $70M/year Real Estate Brokerage — 4 AI Systems
                         </p>
                         <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>
-                          Decentralized manager-worker network automating operations triage
+                          9 hrs → seconds · 30+ hrs/week saved · 100% automated
                         </p>
                       </div>
                       <ArrowRight size={16} weight="bold" style={{ color: 'var(--accent)', flexShrink: 0 }} />
