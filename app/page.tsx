@@ -193,7 +193,7 @@ export default function Home() {
                     className="mt-2 text-base"
                     style={{ color: 'var(--text-secondary)' }}
                   >
-                    AI Automation Specialist &mdash; Business Systems
+                    I build autonomous AI infrastructure that cuts operational tasks from 9 hours to seconds. Stop losing 30+ hours a week to manual workflows.
                   </p>
                   <div
                     className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 rounded-full text-xs font-medium"
