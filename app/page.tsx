@@ -361,7 +361,7 @@ export default function Home() {
                         className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
                         style={{ background: 'var(--accent-glow)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
                       >
-                        ★
+                        ⚡
                       </div>
                       <div className="flex-1 min-w-0 text-left">
                         <p className="text-[10px] uppercase tracking-widest font-semibold mb-0.5" style={{ color: 'var(--accent)' }}>
