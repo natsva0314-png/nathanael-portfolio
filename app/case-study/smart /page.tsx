@@ -96,7 +96,7 @@ const SYSTEMS = [
     num: '04',
     title: 'Central AI Agent Orchestration Mesh',
     steps: 'Connected AI sub-agent network',
-    desc: 'A team of four specialized AI assistants managed by one Primary Manager Agent. Sub-Agent 1 reads systemic data lists, Sub-Agent 3 handles data hygiene in HubSpot, and Sub-Agent 4 uses a built-in AI tool to generate clean daily metrics summaries directly inside the CEO's Slack channel.',
+    desc: 'A team of four specialized AI assistants managed by one Primary Manager Agent. Sub-Agent 1 reads systemic data lists, Sub-Agent 3 handles data hygiene in HubSpot, and Sub-Agent 4 uses a built-in AI tool to generate clean daily metrics summaries directly inside the CEOs Slack channel.',
     tools: ['Zapier', 'Claude AI', 'Zapier Tables', 'Gmail', 'Google Sheets', 'HubSpot CRM', 'Slack'],
         workflows: [
       { label: 'Primary Manager Agent Routing Control', path: '/projects/Ma1.png' },
