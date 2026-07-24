@@ -369,10 +369,10 @@ export default function Home() {
                           Featured Case Study
                         </p>
                         <p className="text-sm font-semibold leading-tight truncate" style={{ color: 'var(--text-primary)' }}>
-                          $70M/year Real Estate Brokerage — 4 AI Systems
+                          Automated Sales Setup & 4 AI Assistants
                         </p>
                         <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>
-                          9 hrs → seconds · 30+ hrs/week saved · 100% automated
+                          30 mins ➔ seconds · 20+ hrs/week saved · 100% automated
                         </p>
                       </div>
                       <ArrowRight size={16} weight="bold" style={{ color: 'var(--accent)', flexShrink: 0 }} />
