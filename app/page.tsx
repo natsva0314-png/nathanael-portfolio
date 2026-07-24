@@ -11,8 +11,7 @@ import MouseEffect from '@/components/MouseEffect'
 import ThemeToggle from '@/components/ThemeToggle'
 import { ArrowCounterClockwise, ArrowRight } from '@phosphor-icons/react'
 import SocialLinks from '@/components/SocialLinks'
-import Link from 'next/link'
-import MultiAgentCaseStudy from '../MultiAgentCaseStudy';
+import Link from 'next/link';
 
 
 function stripMarkdown(text: string): string {
