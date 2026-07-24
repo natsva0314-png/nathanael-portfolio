@@ -146,7 +146,7 @@ const stagger = {
   show: { transition: { staggerChildren: 0.1 } },
 }
 
-export default function RealEstateCaseStudy() {
+export default function SmartCaseStudy() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
 
   useEffect(() => {
