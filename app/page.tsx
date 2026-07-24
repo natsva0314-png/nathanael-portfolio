@@ -368,7 +368,7 @@ export default function Home() {
                           Featured Case Study
                         </p>
                         <p className="text-sm font-semibold leading-tight truncate" style={{ color: 'var(--text-primary)' }}>
-                          Automated Sales Setup & 4 AI Assistants
+                          Automated Sales Setup - 4 AI Assistants
                         </p>
                         <p className="text-[11px] mt-0.5" style={{ color: 'var(--text-secondary)' }}>
                           30 mins ➔ seconds · 20+ hrs/week saved · 100% automated
