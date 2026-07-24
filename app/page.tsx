@@ -187,13 +187,13 @@ export default function Home() {
                     className="text-4xl md:text-5xl font-bold tracking-tight leading-tight"
                     style={{ color: 'var(--text-primary)' }}
                   >
-                    Hey, I&apos;m Nathanael 👋
+                    Hi, I&apos;m Nathanael 👋
                   </h1>
                   <p
                     className="mt-2 text-base"
                     style={{ color: 'var(--text-secondary)' }}
                   >
-                    AI Automation Specialist &mdash; Mandaue City, PH
+                    AI Automation Specialist &mdash; Business Systems
                   </p>
                   <div
                     className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 rounded-full text-xs font-medium"
