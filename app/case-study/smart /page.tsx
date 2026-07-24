@@ -63,7 +63,7 @@ const SYSTEMS = [
     num: '01',
     title: 'Main Customer Form Intake',
     steps: '100% of new sign-ups sorted and organized',
-    desc: 'Triggered when someone submits a form on the website. This system cleans up the text, automatically looks up the company's background info, sorts the lead into a corporate or regular track, and saves everything to a central list.',
+    desc: 'Triggered when someone submits a form on the website. This system cleans up the text, automatically looks up the company’s background info via Apollo.io, sorts the lead into a corporate or regular track, and saves everything to a central database ledger.',
     tools: ['Zapier', 'Claude AI', 'Gmail', 'Apollo.io', 'HubSpot CRM', 'Slack', 'Zapier Tables'],
     image: '/projects/wf3.png',
     imageLabel: '[Core Intake & Enrichment Pipeline — 18 Steps]',
