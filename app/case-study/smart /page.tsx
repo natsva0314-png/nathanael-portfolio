@@ -146,7 +146,7 @@ const stagger = {
   show: { transition: { staggerChildren: 0.1 } },
 }
 
-export default function SmartCaseStudy() {
+export default function RealEstateCaseStudy() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
 
   useEffect(() => {
@@ -449,8 +449,8 @@ export default function SmartCaseStudy() {
               { label: 'Hours saved every', num: 20, suffix: '+', bottom: 'single week across the team' },
               { label: 'AI assistants', num: 4, suffix: '', bottom: 'running smoothly at the same time' },
               { label: 'Manual folder creation tasks', num: 0, suffix: '', bottom: 'left for the team' },
-              { label: 'Clean names and accurate customer logs', num: 100, suffix: '%', bottom: 'Zero manual processing' },
-              { label: 'Meeting logging accuracy via the calendar tool', num: 100, suffix: '%', bottom: 'In client\'s exact voice' },
+              { label: 'Clean names', num: 100, suffix: '%', bottom: 'accurate customer logs' },
+              { label: 'Meeting logging accuracy', num: 100, suffix: '%', bottom: 'via the calendar tool' },
             ].map((r, i) => (
               <motion.div
                 key={r.label}
