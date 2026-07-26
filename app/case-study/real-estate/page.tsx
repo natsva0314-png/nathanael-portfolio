@@ -101,7 +101,7 @@ const SYSTEMS = [
         workflows: [
       { label: 'New Lead Intake', path: '/projects/wf01.png' },
       { label: 'Engagement Trigger', path: '/projects/wf2.png' },
-      { label: 'Hot Lead Conversion', path: '/projects/wf3.png' },
+      { label: 'Hot Lead Conversion', path: '/projects/wf03.png' },
       { label: 'Post Call Summary', path: '/projects/wf4.png' },
       { label: 'Past Client Snapshot', path: '/projects/wf5.png' },
       { label: 'Past Client QCheck-in', path: '/projects/wf6.png' },
