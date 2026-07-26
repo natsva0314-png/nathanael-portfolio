@@ -99,7 +99,7 @@ const SYSTEMS = [
     desc: 'A team of four specialized AI assistants managed by one Primary Manager Agent. Sub-Agent 1 reads systemic data lists, Sub-Agent 3 handles data hygiene in HubSpot, and Sub-Agent 4 uses a built-in AI tool to generate clean daily metrics summaries directly inside the CEOs Slack channel.',
     tools: ['Zapier', 'Claude AI', 'Zapier Tables', 'Gmail', 'Google Sheets', 'HubSpot CRM', 'Slack'],
         workflows: [
-      { label: 'Primary Manager Agent Routing Control', path: '/projects/Ma1.png' },
+      { label: 'Primary Manager Agent Routing Control', path: '/projects/Ma.png' },
       { label: 'Sub-Agent 1: Ledger & Workflow Monitor', path: '/projects/sa1.png' },
       { label: 'Sub-Agent 2: Copywriter & Email Marketer', path: '/projects/sa2.png' },
       { label: 'Sub-Agent 3: HubSpot CRM Specialist', path: '/projects/sa3.png' },
