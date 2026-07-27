@@ -223,7 +223,7 @@ export default function RealEstateCaseStudy() {
             className="flex flex-wrap items-center gap-3 mb-10"
           >
             {[
-              { icon: Circle, text: 'Transaction Intake Portal' },
+              { icon: Robot, text: 'Transaction Intake Portal' },
               { icon: Gear, text: 'Human-in-the-Loop AI Review' },
               { icon: CheckCircle, text: 'Dynamic Review Delivery Loop' },
             ].map(({ icon: Icon, text }) => (
