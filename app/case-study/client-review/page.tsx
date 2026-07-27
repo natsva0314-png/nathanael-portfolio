@@ -53,87 +53,70 @@ function AnimatedStat({ to, prefix = '', suffix = '', duration = 1.8 }: {
 }
 
 const TOOLS = [
-  'Zapier', 'Claude AI', 'HubSpot CRM', 'Apollo.io',
-  'Google Drive', 'Google Sheets', 'DocuSign API',
-  'Calendly', 'Zapier Central AI', 'Zapier Tables', 'Slack', 'Gmail',
+  'Zapier', 'Claude AI', 'Zapier Forms', 'Gmail',
+  'Google Sheets',
 ]
 
 const SYSTEMS = [
   {
     num: '01',
-    title: 'Main Customer Form Intake',
-    steps: '100% of new sign-ups sorted and organized',
-    desc: 'Triggered when someone submits a form on the website. This system cleans up the text, automatically looks up the company’s background info via Apollo.io, sorts the lead into a corporate or regular track, and saves everything to a central database ledger.',
-    tools: ['Zapier', 'Claude AI', 'Gmail', 'Apollo.io', 'HubSpot CRM', 'Slack', 'Zapier Tables'],
-    image: '/projects/wf3.png',
-    imageLabel: '[Core Intake & Enrichment Pipeline — 18 Steps]',
+    title: 'Internal Transaction Agent Intake',
+    steps: '100% of closed sales routed for feedback collection',
+    desc: 'Triggered the exact second an internal agent enters transaction and client profile data into a secure intake form. This system establishes a clean database ledger, maps customer metadata parameters, and immediately deploys a personalized, automated transaction confirmation message to kick off the client engagement pipeline.',
+    tools: ['Zapier Forms', 'Gmail', 'Google Sheets'],
+    image: '/projects/ase.png',
+    imageLabel: '[Agent Intake & Confirmation Pipeline — 3 Steps]',
     icon: FileText,
-    metric: '100% of sign-ups routed & scored',
+    metric: 'Zero manual data duplication across platforms',
   },
   {
     num: '02',
-    title: 'New Customer Onboarding Provisioner',
-    steps: 'Multi-app post-sale fulfillment sync',
-    desc: 'The exact second a salesperson marks a deal as closed-won in HubSpot, this system takes over. It instantly spins up a secure customer directory in Google Drive, builds a personalized agreement draft via DocuSign, and posts a celebration alert to the internal Slack team.',
-    tools: ['Zapier', 'Google Drive', 'HubSpot CRM', 'DocuSign', 'Slack', 'Zapier Tables'],
-    image: '/projects/wf1.png',
-    imageLabel: '[New Customer Setup & Document Provisioner]',
+    title: 'Feedback Analysis & Human-in-the-Loop AI Review',
+    steps: 'Agent quality gate to ensure 100% brand safety',
+    desc: 'Captures raw, brief customer feedback from a dedicated external submission page. The workflow instantly channels the text through Anthropics Claude AI to analyze customer sentiment and expand casual notes into polished, professional testimonials that align with company brand guidelines. Rather than emailing the client directly, the system routes the generated text to the internal agent for approval via a secure verification email notification.',
+    tools: ['Zapier Forms', 'Anthropic-Claude', 'Google Sheets', 'Gmail'],
+    image: '/projects/apr.png',
+    imageLabel: '[AI Testimonial Enrichment & Human Verification Engine — 7 Steps]',
     icon: Lightning,
-    metric: 'Zero manual folder creation tasks',
+    metric: 'Instant sentiment parsing of raw user text',
   },
   {
     num: '03',
-    title: 'Automatic Calendar Sync Matcher',
-    steps: 'Cross-platform scheduling sync',
-    desc: 'Watches your customer booking page. The moment a customer schedules a kickoff call via Calendly, this system automatically looks up their profile in the database by email and appends the complete meeting notes onto their activity timeline so no data gets lost.',
-    tools: ['Zapier', 'Calendly', 'HubSpot CRM', 'Zapier Tables'],
-    image: '/projects/wf2.png',
-    imageLabel: '[Automated Meeting Matcher Timeline Sync]',
+    title: 'Dynamic Review Delivery & Retention Loop',
+    steps: '3-day delayed behavioral follow-up sequence',
+    desc: 'Monitors the central Google Sheets master database for a manual REVIEW APPROVAL checkbox update from the internal agent. Once checked, the pipeline automatically releases the approved review draft directly to the client via a personalized Gmail delivery layout embedded with direct review links for platforms like Google and Zillow. To maximize conversion rates, a time delay step pauses the pipeline before evaluating client action and issuing an automated follow-up reminder if needed.',
+    tools: ['Zapier', 'Google Sheets', 'Gmail'],
+    image: '/projects/sr.png',
+    imageLabel: '[Review Delivery & Behavioral Follow-up Pipeline — 6 Steps]',
     icon: Star,
-    metric: '100% meeting logging accuracy',
-  },
-  {
-    num: '04',
-    title: 'Central AI Agent Orchestration Mesh',
-    steps: 'Connected AI sub-agent network',
-    desc: 'A team of four specialized AI assistants managed by one Primary Manager Agent. Sub-Agent 1 reads systemic data lists, Sub-Agent 3 handles data hygiene in HubSpot, and Sub-Agent 4 uses a built-in AI tool to generate clean daily metrics summaries directly inside the CEOs Slack channel.',
-    tools: ['Zapier', 'Claude AI', 'Zapier Tables', 'Gmail', 'Google Sheets', 'HubSpot CRM', 'Slack'],
-        workflows: [
-      { label: 'Primary Manager Agent Routing Control', path: '/projects/Ma.png' },
-      { label: 'Sub-Agent 1: Ledger & Workflow Monitor', path: '/projects/sa1.png' },
-      { label: 'Sub-Agent 2: Copywriter & Email Marketer', path: '/projects/sa2.png' },
-      { label: 'Sub-Agent 3: HubSpot CRM Specialist', path: '/projects/sa3.png' },
-      { label: 'Sub-Agent 4: CEO Dashboard Formattert', path: '/projects/sa4.png' },
-    ],
-    icon: Robot,
-    metric: '13 AI fields, full audit trail',
+    metric: 'Automated omnichannel review links deployed',
   },
 ]
 
 const PLACEHOLDERS = [
   { 
-    label: 'Live CEO Summary Message in Slack', 
+    label: 'Client Experience Intake Portal', 
     icon: Envelope, 
-    image: '/projects/sl1.png' 
+    image: '/projects/Form.png' 
   },
   { 
-    label: 'Customer Database Timeline with Automated Meeting Notes', 
+    label: 'Internal Agent Approval Alert', 
     icon: Buildings, 
-    image: '/projects/hp.png' 
+    image: '/projects/nrr.png' 
   },
   { 
-    label: 'Central Data Tracking Table', 
+    label: 'Final Client Delivery Layout', 
     icon: ChartLineUp, 
-    image: '/projects/tb.png' 
+    image: '/projects/er.png' 
   },
 ]
 
 const RESULTS = [
-  { value: 0, display: 'Seconds', label: 'Time to set up a new customer folder and contract (was 30 mins)', prefix: '' },
-  { value: 20, suffix: '+', label: 'Hours saved every single week across the team', prefix: '' },
-  { value: 4, suffix: '', label: 'AI assistants running smoothly at the same time', prefix: '' },
-  { value: 0, suffix: '', label: 'WManual folder creation tasks left for the team', prefix: '' },
-  { value: 100, suffix: '%', label: 'Clean names and accurate customer logs', prefix: '' },
+  { value: 0, display: 'Seconds', label: 'Time required to translate customer thoughts into professional testimonials (was 5 mins)', prefix: '' },
+  { value: 15, suffix: '+', label: 'Hours saved every single week across the business operations team', prefix: '' },
+  { value: 2, suffix: '+', label: 'Integrated public review platforms linked directly to minimize user friction', prefix: '' },
+  { value: 0, suffix: '', label: 'Manual follow-up emails left for sales agents to manage individually', prefix: '' },
+  { value: 100, suffix: '%', label: 'Automated tracking from raw feedback submission to enriched review drafts', prefix: '' },
 ]
 
 const fadeUp = {
@@ -261,10 +244,10 @@ export default function RealEstateCaseStudy() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-14"
           >
             {[
-              { value: '4', label: 'Connected Systems' },
-              { value: '30 mins → 1 sec', label: 'Customer Setup Speed' },
-              { value: '20+', label: 'Hrs Saved / Week' },
-              { value: '100%', label: 'CRM Data Hygiene' },
+              { value: '3', label: 'Connected Systems' },
+              { value: '5 mins → 1 sec', label: 'Review Generation Speed' },
+              { value: '15+', label: 'Hrs Saved / Week' },
+              { value: '100%', label: 'Brand Compliance' },
             ].map((s) => (
               <div
                 key={s.label}
@@ -289,15 +272,15 @@ export default function RealEstateCaseStudy() {
             style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}
           >
             <p className="text-sm mb-5" style={{ color: 'var(--text-secondary)' }}>
-              A fast-growing company was losing time and missing important details because their software tools did not talk to each other, and their team spent hours manually setting up new customers.
+              A high-volume real estate boutique was struggling to capture high-quality client reviews after closing successful transactions. Manual follow-up methods were slow, inconsistent, and often resulted in vague customer feedback that failed to boost SEO rankings or build strong public trust on platforms like Google and Zillow.
             </p>
             <ul className="space-y-3">
               {[
-                'Team members wasted hours copy-pasting customer details between tools',
-                'Salespeople had no background details on new leads before talking to them',
-                'Long delays in creating shared folders and agreements after making a sale',
-                'Calendar bookings would go missing or fail to show up on customer files',
-                'The CEO had no easy way to get a clean, simple daily summary of business health',
+                'Sales agents wasted hours manually drafting and sending review request emails',
+                'Client feedback was often too short or lacked professional context to serve as strong social proof',
+                'Valuable testimonials remained buried in private emails instead of moving to public platforms',
+                'Negative or neutral client sentiment went unmonitored without internal escalation pathways',
+                'No automated follow-up loop existed to remind busy clients to publish their drafted reviews',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                   <span
@@ -314,7 +297,7 @@ export default function RealEstateCaseStudy() {
         </Section>
 
         {/* ── Solution ─────────────────────────────────────────── */}
-        <Section title="The Solution — 4 Automated Systems">
+        <Section title="The Solution — 3 Automated Systems">
           <div className="space-y-8">
             {SYSTEMS.map((sys, i) => (
               <motion.div
@@ -445,12 +428,12 @@ export default function RealEstateCaseStudy() {
         <Section title="Results">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Time to set up a new customer folder and contract', top: '30 mns', bottom: 'Seconds', accent: true },
-              { label: 'Hours saved every', num: 20, suffix: '+', bottom: 'single week across the team' },
-              { label: 'AI assistants', num: 4, suffix: '', bottom: 'running smoothly at the same time' },
-              { label: 'Manual folder creation tasks', num: 0, suffix: '', bottom: 'left for the team' },
-              { label: 'Clean names', num: 100, suffix: '%', bottom: 'accurate customer logs' },
-              { label: 'Meeting logging accuracy', num: 100, suffix: '%', bottom: 'via the calendar tool' },
+              { label: 'Time to turn raw client feedback into professional reviews', top: '5 mns', bottom: 'Seconds', accent: true },
+              { label: 'Hours saved every', num: 15, suffix: '+', bottom: 'single week across the team' },
+              { label: 'Zapier automation workflows', num: 3, suffix: '', bottom: 'running seamlessly together' },
+              { label: 'Manual follow-up emails', num: 0, suffix: '', bottom: 'left for sales agents to manage' },
+              { label: 'Brand guideline compliance', num: 100, suffix: '%', bottom: 'across all generated outputs' },
+              { label: 'Directly linked review channels', num: 2, suffix: '+', bottom: 'integrated to minimize user friction' },
             ].map((r, i) => (
               <motion.div
                 key={r.label}
