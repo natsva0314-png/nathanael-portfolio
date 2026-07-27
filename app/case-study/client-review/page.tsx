@@ -204,7 +204,7 @@ export default function RealEstateCaseStudy() {
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--accent)' }} />
-              Featured Case Study
+              AI Implementation
             </div>
           </motion.div>
 
@@ -213,9 +213,9 @@ export default function RealEstateCaseStudy() {
             className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4"
             style={{ color: 'var(--text-primary)' }}
           >
-            Smart Sales Setup &{' '}
-            <span style={{ color: 'var(--accent)' }}>AI</span>{' '}
-            Assistant Team
+            AI-Powered{' '}
+            <span style={{ color: 'var(--accent)' }}>Client Review</span>{' '}
+            Engine
           </motion.h1>
 
           <motion.div
@@ -223,9 +223,9 @@ export default function RealEstateCaseStudy() {
             className="flex flex-wrap items-center gap-3 mb-10"
           >
             {[
-              { icon: Robot, text: 'Sales & Customer Setup' },
-              { icon: Gear, text: 'Support System' },
-              { icon: CheckCircle, text: 'Automation Builder' },
+              { icon: Circle, text: 'Transaction Intake Portal' },
+              { icon: Gear, text: 'Human-in-the-Loop AI Review' },
+              { icon: CheckCircle, text: 'Dynamic Review Delivery Loop' },
             ].map(({ icon: Icon, text }) => (
               <div
                 key={text}
